@@ -23,13 +23,14 @@ def testWords(intcode):
     for noun in range(100):
         for verb in range(100):
             test_code = list(intcode)
+
             test_code[1] = noun
             test_code[2] = verb
 
             if(opcode(test_code)[0] == 19690720):
-                return [noun,verb]
+                return 100 * noun + verb
                 break
-            else:
-                return ["no results","were found"]
+#            else:
+#                return ["no results","were found]
 
-print(testWords(intcode)[0],testWords(intcode)[1])
+print(testWords(intcode))
