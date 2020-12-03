@@ -1,4 +1,4 @@
-###--- Day 2: Password Philosophy ---
+### --- Day 2: Password Philosophy ---
 
 Your flight departs in a few days from the coastal airport; the easiest way 
 down to the coast from here is via [toboggan](https://en.wikipedia.org/wiki/Toboggan).
@@ -17,9 +17,11 @@ when that password was set**.
 
 For example, suppose you have the following list:
 
-`1-3 a: abcde`
-`1-3 b: cdefg`
-`2-9 c: ccccccccc`
+```
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+```
 
 Each line gives the password policy and then the password. The password 
 policy indicates the lowest and highest number of times a given letter must 
