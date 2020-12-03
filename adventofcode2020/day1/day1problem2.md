@@ -1,4 +1,4 @@
-###--- Part Two ---
+### --- Part Two ---
 
 The Elves in accounting are thankful for your help; one of them even offers 
 you a starfish coin they had left over from a past vacation. They offer you 
