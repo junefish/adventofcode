@@ -5,6 +5,5 @@ bag_colors = {}
 for rule in rules:
     words = rule.split(' ')
     color = words[0] + ' ' + words[1]
-    bag_colors.update({color : ''})
-
-print(bag_colors)
+    contents = ' '.join([str(word) for word in words[4:]]) 
+    bag_colors.update({color : contents})
