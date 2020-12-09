@@ -7,3 +7,5 @@ for rule in rules:
     color = words[0] + ' ' + words[1]
     contents = ' '.join([str(word) for word in words[4:]]) 
     bag_colors.update({color : contents})
+
+print(bag_colors)
