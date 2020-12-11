@@ -1,8 +1,9 @@
-with open('adventofcode2020\day7\day7input.txt', 'r') as input:
+with open(r'adventofcode2020\day7\day7input.txt', 'r') as input:
     rules = [line.rstrip() for line in input]
 
 bag_rules = {}
-parent_bags = set()
+parent_bags = []
+total_ancestors = set()
 for rule in rules:
     words = rule.split(' ')
     color = words[0] + ' ' + words[1]
@@ -10,13 +11,29 @@ for rule in rules:
     bag_rules.update({color : contents})
 
     if('shiny gold' in contents):
-        parent_bags.add(color)
+        parent_bags.append(color)
+total_ancestors.update(parent_bags)
 
 temp = []
-for item in bag_rules.items():
-    for parent in parent_bags:
-        if(parent in item[1]):
-            temp.append(item[0])
-parent_bags.update(temp)
+for parent in parent_bags:
+    for rule in rules:
+        words = rule.split(' ')
+        color = words[0] + ' ' + words[1]
+        contents = ' '.join([str(word) for word in words[4:]]) 
+        
+        if('shiny gold' in contents):
+            temp.append(color)
 
-print(len(parent_bags))
+while(len(parent_bags) > 0):
+    parent_bags = temp
+    total_ancestors.update(parent_bags)
+    temp = []
+    for parent in parent_bags:
+        for rule in rules:
+            words = rule.split(' ')
+            color = words[0] + ' ' + words[1]
+            contents = ' '.join([str(word) for word in words[4:]]) 
+            
+            if('shiny gold' in contents):
+                temp.append(color)
+print(len(total_ancestors))
