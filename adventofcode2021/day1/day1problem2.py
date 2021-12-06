@@ -9,7 +9,6 @@ window_sums = []
 for i in range(0, len(depths)-2):
     window = (depths[i], depths[i+1], depths[i+2])
     window_sums.append(sum(window))
-# print(window_sums)
 
 deltas = []
 for i in range(0, len(window_sums)):
@@ -19,7 +18,8 @@ for i in range(0, len(window_sums)):
         delta = "increased"
     elif(window_sums[i] < window_sums[i-1]):
         delta = "decreased"
+    elif(window_sums[i] == window_sums[i-1]):
+        delta = "no change"
     deltas.append(delta)
- #   print((str(window_sums[i])) + delta)
 
 print(deltas.count("increased"))
