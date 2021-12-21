@@ -6,21 +6,13 @@ with open('adventofcode2021\day3\day3example.txt', 'r') as input:
     item = line.split('\n')
     diagnostics.append(str(item[0]))
 
-digits = []
-for i in range(len(diagnostics)):
-    digits.append(list(diagnostics[i]))
-
-number_length = len(digits[0])
+number_length = len(diagnostics[0])
 digit_lists = [[] for x in range(number_length)]
 
-for entry in digits:
-    for i in range(number_length):
-        digit_lists[i].append(entry[i])
-
 oxygen_test = diagnostics
-for i in range(len(digit_lists)):
-    digit = digit_lists[i]
-    bit = ['1' for x in range(number_length)]
-    if(digit.count('0') != digit.count('1')):
-        bit[i] = str(mode(digit))
-print(bit)
+oxygen_mode = digit_lists
+for i in len(oxygen_test):
+    for j in range(number_length):
+        oxygen_mode[i][j].append(oxygen_test[i][j])
+
+print(oxygen_mode)
