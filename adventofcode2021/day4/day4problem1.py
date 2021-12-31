@@ -1,4 +1,4 @@
-with open('adventofcode2021\day4\day4example.txt', 'r') as input:
+with open('adventofcode2021\day4\day4input.txt', 'r') as input:
   called, *boards = input.read().split('\n\n')
   called = [int(i) for i in called.split(',')]
   boards = [[[int(col) for col in row.split()] for row in board.split('\n')] for board in boards]
