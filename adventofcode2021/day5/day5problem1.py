@@ -1,7 +1,7 @@
 from typing import Counter
 
 
-with open('adventofcode2021\day5\day5example.txt', 'r') as input:
+with open('adventofcode2021\day5\day5input.txt', 'r') as input:
   lines = input.read().splitlines()
 
 # print(lines)
