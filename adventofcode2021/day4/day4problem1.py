@@ -26,5 +26,13 @@ def check_winner(board):
         if winner:
             return winner
 
-temp_board = [['x', 'x', 'x', 'x', 'x'], [0, 1, 2, 4, 5], [0, 1, 2, 4, 5], [0, 1, 2, 4, 5], [0, 1, 2, 4, 5]]
+    for col in range(0, len(board[0])):
+        winner = all(elem in ['x'] for elem in [row[col] for row in board])
+
+        if winner:
+            return winner
+
+    return winner
+
+temp_board = [['x', 1, 4, 5, 666], ['x', 1, 2, 4, 5], ['x', 1, 2, 4, 5], ['x', 1, 2, 4, 5], ['x', 1, 2, 4, 5]]
 print(check_winner(temp_board))
