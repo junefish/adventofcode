@@ -1,6 +1,6 @@
 with open('adventofcode2021\day4\day4example.txt', 'r') as input:
   called, *boards = input.read().split('\n\n')
-#  boards = [list(board) for board in boards]
+  called = [int(i) for i in called.split(',')]
   boards = [[[int(col) for col in row.split()] for row in board.split('\n')] for board in boards]
 
 def mark_boards(number, board):
@@ -17,12 +17,8 @@ def sum_boards(board):
                 sum += entry
     return sum
 
-mark_boards(called[0], boards[0])
 print(sum_boards(boards[0]))
 
-temp_sum = 0
-for row in boards[0]:
-    for num in row:
-        temp_sum += num
+mark_boards(called[0], boards[0])
 
-print(temp_sum)
+print(sum_boards(boards[0]))
