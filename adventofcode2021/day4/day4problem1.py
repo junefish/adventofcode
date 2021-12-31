@@ -34,5 +34,14 @@ def check_winner(board):
 
     return winner
 
-temp_board = [['x', 1, 4, 5, 666], ['x', 1, 2, 4, 5], ['x', 1, 2, 4, 5], ['x', 1, 2, 4, 5], ['x', 1, 2, 4, 5]]
-print(check_winner(temp_board))
+win = False
+for number in called:
+    for board in boards:
+        mark_boards(number, board)
+
+        if(check_winner(board)):
+            print(sum_boards(board) * number)
+            win = True
+            break
+    if win:
+        break
