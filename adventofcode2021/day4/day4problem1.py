@@ -17,8 +17,14 @@ def sum_boards(board):
                 sum += entry
     return sum
 
-print(sum_boards(boards[0]))
+def check_winner(board):
+    winner = False
 
-mark_boards(called[0], boards[0])
+    for row in board:
+        winner = all(elem in ['x'] for elem in row)
 
-print(sum_boards(boards[0]))
+        if winner:
+            return winner
+
+temp_board = [['x', 'x', 'x', 'x', 'x'], [0, 1, 2, 4, 5], [0, 1, 2, 4, 5], [0, 1, 2, 4, 5], [0, 1, 2, 4, 5]]
+print(check_winner(temp_board))
