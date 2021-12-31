@@ -19,4 +19,4 @@ for line in lines:
             for y in range (min(y1, y2), max(y1, y2) + 1):
                 all_points.append((x,y))
 
-print(Counter(all_points))
+print(len([point for point in Counter(all_points).values() if point > 1]))
