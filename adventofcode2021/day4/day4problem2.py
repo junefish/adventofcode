@@ -33,3 +33,25 @@ def check_winner(board):
             return winner
 
     return winner
+
+winner_found = False
+while not winner_found:
+    number = called[0]
+    called = called[1:]
+
+    for board in boards:
+        mark_boards(number, board)
+    
+    index = 0
+    while(index < len(boards)):
+        if(check_winner(boards[index])):
+            if(len(boards) > 1):
+                boards.pop(index)
+            
+            else:
+                winner_found = True
+                print(sum_boards(boards[index]) * number)
+                break
+        
+        else:
+            index += 1
