@@ -92,7 +92,7 @@ Before you deploy the robot, you should probably have an **estimate** of the
 area it will cover: specifically, you need to know **the number of panels it
 paints at least once**, regardless of color. In the example above, the robot
 painted **`6`** panels at least once. (It painted its starting panel twice, but
-that panel is still only counted once; it also never painted the panel it
+that panel is [still only counted once](https://www.youtube.com/watch?v=KjsSvjA5TuE); it also never painted the panel it
 ended on.)
 
 Build a new emergency hull painting robot and run the Intcode program on
