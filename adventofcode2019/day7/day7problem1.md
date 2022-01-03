@@ -4,8 +4,8 @@ Based on the navigational maps, you're going to need to send more power to
 your ship's thrusters to reach Santa in time. To do this, you'll need to
 configure a series of [amplifiers](https://en.wikipedia.org/wiki/Amplifier) already installed on the ship.
 
-There are five amplifiers connected in series; each one receives an **input
-signal** and produces an **output signal**. They are connected such that the
+There are five amplifiers connected in series; each one receives an input
+signal and produces an output signal. They are connected such that the
 first amplifier's output leads to the second amplifier's input, the second
 amplifier's output leads to the third amplifier's input, and so on. The
 first amplifier's input value is 0, and the last amplifier's output leads
@@ -20,8 +20,8 @@ input), a program that should run on your [existing Intcode computer](https://ad
 amplifier will need to run a copy of the program.
 
 When a copy of the program starts running on an amplifier, it will first
-use an **input instruction** to ask the amplifier for its **current phase setting**
-(an integer from 0 to 4). Each phase setting is used exactly once, but the
+use an input instruction to ask the amplifier for its current **phase setting**
+(an integer from `0` to `4`). Each phase setting is used **exactly once**, but the
 Elves can't remember which amplifier needs which phase setting.
 
 The program will then call another input instruction to get the amplifier's
@@ -29,8 +29,8 @@ input signal, compute the correct output signal, and supply it back to the
 amplifier with an output instruction. (If the amplifier has not yet
 received an input signal, it waits until one arrives.)
 
-Your job is to find the **largest output signal** that can be sent to the
-thrusters by trying every possible combination of phase settings on the
+Your job is to **find the largest output signal that can be sent to the
+thrusters** by trying every possible combination of phase settings on the
 amplifiers. Make sure that memory is not shared or reused between copies of
 the program.
 
@@ -61,16 +61,16 @@ another sequence might have sent a higher signal to the thrusters.
 
 Here are some example programs:
 
-- Max thruster signal `43210` (from phase setting sequence `4,3,2,1,0`):
+- Max thruster signal **`43210`** (from phase setting sequence `4,3,2,1,0`):
 ```
 3,15,3,16,1002,16,10,16,1,16,15,15,4,15,99,0,0
 ```
-- Max thruster signal `54321` (from phase setting sequence `0,1,2,3,4`):
+- Max thruster signal **`54321`** (from phase setting sequence `0,1,2,3,4`):
 ```
 3,23,3,24,1002,24,10,24,1002,23,-1,23,
 101,5,23,23,1,24,23,23,4,23,99,0,0
 ```
-- Max thruster signal `65210` (from phase setting sequence `1,0,4,3,2`):
+- Max thruster signal **`65210`** (from phase setting sequence `1,0,4,3,2`):
 ```
 3,31,3,32,1002,32,10,32,1001,31,-2,31,1007,31,0,33,
 1002,33,7,33,1,33,31,31,1,32,31,31,4,31,99,0,0,0
