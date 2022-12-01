@@ -2,7 +2,11 @@ items = []
 
 with open('adventofcode2022/day1/day1input.txt', 'r') as input:
     for line in input:
-        item = line.split('\n\n')
-        items.append(item[0])
+        items.append(line.strip())
 
-elves = [[]]*(items.count('\n')+1)
+# print(items)
+# print(items[0])
+
+elves = [[]]*(items.count('')+1)
+
+# print(len(elves))
