@@ -46,7 +46,7 @@ because you chose Paper + `6` because you won).
 should choose Rock (`X`). This ends in a loss for you with a score of **`1`** 
 (`1 + 0`).
 - The third round is a draw with both players choosing Scissors, giving 
-you a score of <code>3 + 3 = <b>6</b></code.
+you a score of <code>3 + 3 = <b>6</b></code>.
 
 In this example, if you were to follow the strategy guide, you would get a 
 total score of <code><b>15</b> (8 + 1 + 6)</code>.
