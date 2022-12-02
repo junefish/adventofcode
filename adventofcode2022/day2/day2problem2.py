@@ -60,4 +60,9 @@ for round in rounds:
             choice = 'rock'
             result = outcomes['win']
             
-    print(round[0], choice, result)
+    # calculate score
+    score = result + points[choice]
+    scores.append(score)
+
+# print total score    
+print(sum(scores))
