@@ -2,6 +2,7 @@
 items = []
 elves = [[]]
 calories = []
+maxes = []
 
 # read input file
 with open('adventofcode2022/day1/day1example.txt', 'r') as input:
@@ -19,3 +20,10 @@ for item in items:
 # calculate calories carried per elf
 for elf in elves:
     calories.append(sum(elf))
+
+# calculate top 3 maximums
+for i in range(3):
+    maxes.append(max(calories))
+    calories.remove(max(calories))
+    
+print(sum(maxes))
