@@ -14,6 +14,13 @@ for item in items:
     if item == delimiter:
         elves.append([])
     elif item != delimiter: 
-        elves[-1].append(item)
-        
+        elves[-1].append(int(item))
+
 # print(elves)
+
+calories = []
+
+for elf in elves:
+    calories.append(sum(elf))
+
+print(max(calories))
