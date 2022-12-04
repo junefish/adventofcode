@@ -15,4 +15,14 @@ items = []
 for c in common:
      items.append(''.join(set(c)))
 
-print(items)
+# print(items)
+
+priorities = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+
+# print(priorities)
+
+total = 0
+for item in items:
+    total = total + priorities.index(item) + 1
+
+print(total)
