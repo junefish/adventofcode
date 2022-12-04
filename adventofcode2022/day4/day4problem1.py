@@ -1,20 +1,20 @@
+# initialise list
 assignments = []
+
+# read input file
 with open('adventofcode2022/day4/day4input.txt', 'r') as input:
     for line in input:
         line = line.strip()
         assignments.append(line.split(','))
-        
-# print(assignments)
-
+ 
+# calculate number of pairs with overlapping ranges       
 contains = 0
 for pair in assignments:
-    elf1,elf2 = pair[0],pair[-1]
-    # print(elf1,elf2)
-    
+    elf1,elf2 = pair[0],pair[-1]    
     start1,end1 = elf1.split('-')
     start2,end2 = elf2.split('-')
-    # print(start1,end1)
-    # print(start2,end2)
+    
+    # cast to integer
     start1 = int(start1)
     start2 = int(start2)
     end1 = int(end1)
@@ -27,4 +27,5 @@ for pair in assignments:
     elif(start2 <= start1 and end2 >= end1):
         contains = contains + 1
 
+# print answer
 print(contains)
