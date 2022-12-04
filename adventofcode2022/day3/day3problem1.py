@@ -5,4 +5,14 @@ with open('/data/data/com.termux/files/home/adventofcode/adventofcode2022/day3/d
         first_half, second_half = package[:len(package)//2], package[len(package)//2:]
         contents.append([first_half,second_half])
 
-print(contents)
+# print(contents)
+
+common = []
+for rucksack in contents:
+    common.append([value for value in rucksack[0] if value in rucksack[1]])
+
+items = []
+for c in common:
+     items.append(''.join(set(c)))
+
+print(items)
