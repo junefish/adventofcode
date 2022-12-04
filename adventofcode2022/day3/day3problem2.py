@@ -24,3 +24,9 @@ for c in common:
 print(items)
 
 priorities = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+
+total = 0
+for item in items:
+    total = total + priorities.index(item) + 1
+
+print(total)
