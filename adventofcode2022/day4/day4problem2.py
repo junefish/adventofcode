@@ -15,3 +15,12 @@ for pair in assignments:
     start2 = int(start2)
     end1 = int(end1)
     end2 = int(end2)
+    
+    # check if elf1's range overlaps before elf 2's range
+    if(start1 <= start2 and end1 >= start2):
+        contains = contains + 1
+    # check if elf1's range overlaps after elf 2's range
+    elif(start1 >= start2 and end1 >= start2):
+        contains = contains + 1
+
+print(contains)
