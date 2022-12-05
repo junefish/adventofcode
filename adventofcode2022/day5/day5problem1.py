@@ -12,7 +12,15 @@ for line in input:
     if line == delimiter:
         instructions.append([])
     elif line != delimiter: 
-        instructions[-1].append(line.split('\n')[0])
+        instructions[-1].append(line.split(delimiter)[0])
         
 drawing = instructions[0]
-procedure = instructions[1]
+
+procedure = [[]]
+for line in instructions[1]:
+    if line == delimiter:
+        procedure.append([])
+    elif line != delimiter: 
+        procedure[-1].append(line.split(delimiter)[0])
+        
+print(procedure)
