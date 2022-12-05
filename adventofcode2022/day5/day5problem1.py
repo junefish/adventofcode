@@ -15,4 +15,13 @@ for line in input:
         instructions[-1].append(line.split('\n')[0])
         
 drawing = instructions[0]
-procedure = instructions[1]
+
+procedure = []
+for step in instructions[1]:
+    step = step.split(' ')
+    step.remove('move')
+    step.remove('from')
+    step.remove('to')
+    procedure.append(step)
+
+print(procedure)
