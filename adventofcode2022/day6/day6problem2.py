@@ -1,0 +1,11 @@
+from collections import Counter
+
+with open('adventofcode2022/day6/day6example.txt', 'r') as file:
+    for line in file:
+        datastream = line.strip()
+        
+for i in range(14, len(datastream)-14):
+    marker = datastream[i-14:i]
+    freq = Counter(marker)
+
+    print(marker, len(freq))
