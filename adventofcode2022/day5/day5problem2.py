@@ -44,4 +44,10 @@ for step in procedure:
         crate = crate_stacks[start-1].pop(len(crate_stacks[start-1]) - i)
         crate_stacks[end-1].append(crate)
         i = i-1
-    print(crate_stacks)
+    # print(crate_stacks)
+
+top = ""
+for i in range(len(crate_stacks)):
+    top = "".join([top,crate_stacks[i].pop()])
+    
+print(top)
