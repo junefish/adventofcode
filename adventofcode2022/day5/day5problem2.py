@@ -33,3 +33,15 @@ for step in instructions[1]:
     step.remove('from')
     step.remove('to')
     procedure.append(step)
+    
+for step in procedure:
+    times = int(step[0])
+    start = int(step[1])
+    end = int(step[2])
+
+    i = times
+    while i > 0:
+        crate = crate_stacks[start-1].pop(len(crate_stacks[start-1]) - i)
+        crate_stacks[end-1].append(crate)
+        i = i-1
+    print(crate_stacks)
