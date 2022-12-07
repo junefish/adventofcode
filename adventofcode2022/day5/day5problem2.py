@@ -33,7 +33,8 @@ for step in instructions[1]:
     step.remove('from')
     step.remove('to')
     procedure.append(step)
-    
+
+# follow steps to rearrange crates
 for step in procedure:
     times = int(step[0])
     start = int(step[1])
@@ -44,10 +45,11 @@ for step in procedure:
         crate = crate_stacks[start-1].pop(len(crate_stacks[start-1]) - i)
         crate_stacks[end-1].append(crate)
         i = i-1
-    # print(crate_stacks)
 
+# find top crate on each stack
 top = ""
 for i in range(len(crate_stacks)):
     top = "".join([top,crate_stacks[i].pop()])
     
+# print answer
 print(top)
