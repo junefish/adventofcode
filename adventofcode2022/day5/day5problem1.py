@@ -1,7 +1,7 @@
 input = []
 
 # read input file
-with open('adventofcode2022/day5/day5example.txt', 'r') as file:
+with open('adventofcode2022/day5/day5input.txt', 'r') as file:
     for line in file:
         # line = line.strip()
         input.append(line)
