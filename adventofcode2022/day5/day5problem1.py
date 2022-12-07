@@ -15,6 +15,14 @@ for line in input:
         instructions[-1].append(line.split('\n')[0])
         
 drawing = instructions[0]
+# print(drawing)
+crates = []
+for line in drawing:
+    crates.append([line[containers * 4 + 1] for containers in range(len(line) // 4 + 1)])    
+# print(crates)
+crate_stack = []
+crate_stack = [list("".join(stack_column).strip()[::-1]) for stack_column in zip(*crates)]
+print(crate_stack)
 
 procedure = []
 for step in instructions[1]:
@@ -24,4 +32,4 @@ for step in instructions[1]:
     step.remove('to')
     procedure.append(step)
 
-print(procedure)
+# print(procedure)
