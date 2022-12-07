@@ -22,7 +22,7 @@ for line in drawing:
 # print(crates)
 crate_stack = []
 crate_stack = [list("".join(stack_column).strip()[::-1]) for stack_column in zip(*crates)]
-print(crate_stack)
+# print(crate_stack)
 
 procedure = []
 for step in instructions[1]:
@@ -33,3 +33,15 @@ for step in instructions[1]:
     procedure.append(step)
 
 # print(procedure)
+
+for step in procedure:
+    times = int(step[0])
+    start = int(step[1])
+    end = int(step[2])
+
+    i = times
+    while i > 0:
+        crate = crate_stack[start-1].pop()
+        crate_stack[end-1].append(crate)
+        i = i-1
+    print(crate_stack)
