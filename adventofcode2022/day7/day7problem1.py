@@ -39,7 +39,7 @@ for line in terminal_output:
 
 # calculate sum of directories with size at most 100k
 for key, value in sizes.items():
-    if value <= 100_000:
+    if(value <= 100_000):
         total += value
 
 # print answer
