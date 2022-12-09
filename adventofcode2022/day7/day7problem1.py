@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 terminal_output = []
 with open('adventofcode2022/day7/day7example.txt', 'r') as file:
     for line in file:
@@ -5,6 +7,7 @@ with open('adventofcode2022/day7/day7example.txt', 'r') as file:
 # print(terminal_output)
 
 filepath = []
+sizes = defaultdict(int)
 
 for line in terminal_output:
     # change directories
@@ -17,6 +20,16 @@ for line in terminal_output:
         else:
             filepath.append(directory)
     # print(''.join(filepath))
+    
     # list contents
     elif(line.startswith('$ ls')):
         continue
+    
+    # parse ls output for sizes
+    else:
+        size, _ = line.split()
+        if(size.isdigit()):
+            size = int(size)
+            for i in range(len(filepath)):
+                sizes['/'.join(filepath[:i+1])] += size
+print(sizes)
