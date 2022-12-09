@@ -4,17 +4,16 @@ with open('adventofcode2022/day7/day7example.txt', 'r') as file:
         terminal_output.append(line.strip())
 # print(terminal_output)
 
-commands = []
-directories = []
-sizes = []
+filepath = []
+
 for line in terminal_output:
-    output = line.split(' ')
-    if(line[0] == '$'):
-        commands.append(line.split('$ ')[-1])
-    elif(line[0] == 'd'):
-        directories.append(output[-1])
-    elif(line[0].isdigit()):
-        sizes.append(int(output[0]))
-print(commands)
-print(directories)
-print(sizes)
+    # change directories
+    if line.startswith('$ cd'):
+        directory = line.split()[-1]
+        # go to previous directory
+        if directory == '..':
+            filepath.pop()
+        # add directory to filepath
+        else:
+            filepath.append(directory)
+    print(''.join(filepath))
