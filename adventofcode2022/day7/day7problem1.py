@@ -16,4 +16,7 @@ for line in terminal_output:
         # add directory to filepath
         else:
             filepath.append(directory)
-    print(''.join(filepath))
+    # print(''.join(filepath))
+    # list contents
+    elif(line.startswith('$ ls')):
+        continue
