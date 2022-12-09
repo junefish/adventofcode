@@ -5,4 +5,8 @@ with open('adventofcode2022/day8/day8example.txt', 'r') as file:
         forest.append([*treeline])
     forest = [list(map(int, x)) for x in forest]
  
-print(forest)
+# print(forest)
+
+# trees around the edge of the grid
+visible = (len(forest)-1)*4
+print(visible)
