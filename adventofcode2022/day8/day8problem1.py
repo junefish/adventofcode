@@ -1,6 +1,6 @@
 # initialise variables
 forest = []
-# tranpose forest for easier parsing
+# transpose forest for easier parsing
 forest2 = list(zip(*forest))
 visible = 0
 
