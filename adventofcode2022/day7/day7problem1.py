@@ -8,10 +8,10 @@ filepath = []
 
 for line in terminal_output:
     # change directories
-    if line.startswith('$ cd'):
+    if(line.startswith('$ cd')):
         directory = line.split()[-1]
         # go to previous directory
-        if directory == '..':
+        if(directory == '..'):
             filepath.pop()
         # add directory to filepath
         else:
