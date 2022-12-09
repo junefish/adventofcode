@@ -34,8 +34,15 @@ for line in terminal_output:
 total_space = 70000000
 update_size = 30000000
 used_space = sizes['/']
-print(used_space)
+# print(used_space)
 free_space = total_space - used_space
-print(free_space)
+# print(free_space)
 space_needed = update_size - free_space
-print(space_needed)
+# print(space_needed)
+
+options = []
+for key,value in sizes.items():
+    if(value > space_needed):
+        options.append(value)
+
+print(min(options))
