@@ -1,14 +1,19 @@
+# import modules
 from collections import defaultdict
 
+# initialise variables
 terminal_output = []
+filepath = []
+sizes = defaultdict(int)
+total = 0
+max_size = 100000
+
+# read input file
 with open('adventofcode2022/day7/day7input.txt', 'r') as file:
     for line in file:
         terminal_output.append(line.strip())
-# print(terminal_output)
 
-filepath = []
-sizes = defaultdict(int)
-
+# parse input commands
 for line in terminal_output:
     # change directories
     if(line.startswith('$ cd')):
@@ -19,7 +24,6 @@ for line in terminal_output:
         # add directory to filepath
         else:
             filepath.append(directory)
-    # print(''.join(filepath))
     
     # list contents
     elif(line.startswith('$ ls')):
@@ -33,11 +37,10 @@ for line in terminal_output:
             for i in range(len(filepath)):
                 sizes['/'.join(filepath[:i+1])] += size
 
-sum = 0
-max_size = 100000
-
 # calculate sum of directories with size at most 100k
 for key, value in sizes.items():
     if value <= 100_000:
-        sum += value
-print(sum)
+        total += value
+
+# print answer
+print(total)
