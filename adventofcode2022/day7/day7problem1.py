@@ -32,4 +32,12 @@ for line in terminal_output:
             size = int(size)
             for i in range(len(filepath)):
                 sizes['/'.join(filepath[:i+1])] += size
-print(sizes)
+
+sum = 0
+max_size = 100000
+
+# calculate sum of directories with size at most 100k
+for key, value in sizes.items():
+    if value <= 100_000:
+        sum += value
+print(sum)
