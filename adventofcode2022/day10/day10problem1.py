@@ -1,15 +1,22 @@
+# import modules
 from collections import defaultdict
 
+# initialise lists
 signal = []
+cycles = defaultdict(int)
+signal_strength = {}
+
+# define constants
+X = 1
+cycle = 1
+interesting_cycles = [20,60,100,140,180,220]
+total = 0
+
+# read input file
 with open('adventofcode2022/day10/day10input.txt', 'r') as file:
     for line in file:
         signal.append(line.strip())
         
-# print(signal)
-
-X = 1
-cycle = 1
-cycles = defaultdict(int)
 for command in signal:
     cycles[cycle] = X
     if(command=='noop'):
@@ -23,12 +30,9 @@ for command in signal:
         X += V
         cycles[cycle] = X
 
-signal_strength = {}
 for(cycle,X) in cycles.items():
     signal_strength[cycle] = cycle * X
 
-interesting_cycles = [20,60,100,140,180,220]
-total = 0
 for cycle in interesting_cycles:
     total += signal_strength[cycle]
 
