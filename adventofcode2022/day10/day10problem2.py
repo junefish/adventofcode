@@ -21,5 +21,18 @@ for command in signal:
         X += V
         cycles[cycle] = X
 
+sprites = []
 for(cycle,X) in cycles.items():
-    print(cycle,X)
+#     print(cycle,X)
+    sprites.append(X)
+
+output = ''
+screen_width = 40
+for i, value in enumerate(sprites):
+    if sprites[i] in range((i % screen_width) - 1, (i % screen_width) + 2):
+        output += "#"
+    else:
+        output += "."
+    if (i + 1) % screen_width == 0:
+        output += "\n"
+print(output)
