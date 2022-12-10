@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 signal = []
 with open('adventofcode2022/day10/day10example1.txt', 'r') as file:
     for line in file:
@@ -6,12 +8,21 @@ with open('adventofcode2022/day10/day10example1.txt', 'r') as file:
 # print(signal)
 
 X = 1
-cycle = 0
+cycle = 1
+cycles = defaultdict(int)
 for command in signal:
+    cycles[cycle] = X
     if(command=='noop'):
         cycle += 1
+        cycles[cycle] = X
     elif(command.startswith('addx')):
         V = int(command.split(' ')[-1])
-        cycle += 2
+        for i in range(2):
+            cycle += 1
+            cycles[cycle] = X
         X += V
+        cycles[cycle] = X
+
+
+for(cycle,X) in cycles.items():
     print(cycle,X)
