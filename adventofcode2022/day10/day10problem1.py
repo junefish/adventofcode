@@ -23,6 +23,10 @@ for command in signal:
         X += V
         cycles[cycle] = X
 
-
+signal_strength = {}
 for(cycle,X) in cycles.items():
-    print(cycle,X)
+    signal_strength[cycle] = cycle * X
+
+interesting_cycles = [20,60,100,140,180,220]
+for cycle in interesting_cycles:
+    print(signal_strength[cycle])
