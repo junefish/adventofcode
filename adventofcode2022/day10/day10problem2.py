@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 signal = []
-with open('adventofcode2022/day10/day10example2.txt', 'r') as file:
+with open('adventofcode2022/day10/day10input.txt', 'r') as file:
     for line in file:
         signal.append(line.strip())
 
