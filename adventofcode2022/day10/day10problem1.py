@@ -28,5 +28,8 @@ for(cycle,X) in cycles.items():
     signal_strength[cycle] = cycle * X
 
 interesting_cycles = [20,60,100,140,180,220]
+total = 0
 for cycle in interesting_cycles:
-    print(signal_strength[cycle])
+    total += signal_strength[cycle]
+
+print(total)
