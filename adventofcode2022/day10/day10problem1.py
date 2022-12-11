@@ -16,12 +16,17 @@ total = 0
 with open('adventofcode2022/day10/day10input.txt', 'r') as file:
     for line in file:
         signal.append(line.strip())
-        
+
+# run through commands in program        
 for command in signal:
     cycles[cycle] = X
+    
+    # noop = continue
     if(command=='noop'):
         cycle += 1
         cycles[cycle] = X
+    
+    # addx V = wait 2 cycles then add V to X
     elif(command.startswith('addx')):
         V = int(command.split(' ')[-1])
         for i in range(2):
@@ -30,10 +35,13 @@ for command in signal:
         X += V
         cycles[cycle] = X
 
+# calculate signal strength
 for(cycle,X) in cycles.items():
     signal_strength[cycle] = cycle * X
 
+# find sum of signal strengths
 for cycle in interesting_cycles:
     total += signal_strength[cycle]
 
+# print answer
 print(total)
