@@ -33,6 +33,6 @@ for i in range(len(forest[0])):
             
         down = 0
         for t in forest2[j][i+1:]:
-            up += 1
+            down += 1
             if t >= tree:
                 break
