@@ -1,6 +1,6 @@
 forest = []
 
-with open('adventofcode2022/day8/day8example.txt', 'r') as file:
+with open('adventofcode2022/day8/day8input.txt', 'r') as file:
     for line in file:
         treeline = (line.strip())
         forest.append([*treeline])
