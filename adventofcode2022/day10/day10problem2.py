@@ -9,6 +9,8 @@ sprites = []
 # define variables
 X = 1
 cycle = 1
+lit =   '\U0001F7E9'
+dark = '\U00002B1B'
 output = ''
 screen_width = 40
 
@@ -43,11 +45,11 @@ for(cycle,X) in cycles.items():
 for i, value in enumerate(sprites):
     # light pixel if pixel is in range of 3-pixel sprite
     if sprites[i] in range((i % screen_width) - 1, (i % screen_width) + 2):
-        output += "#"
+        output += lit
 
     # otherwise keep pixel dark
     else:
-        output += "."
+        output += dark
     
     # at edge of screen add newline
     if (i + 1) % screen_width == 0:
