@@ -1,5 +1,8 @@
+# initialise lists
 forest = []
+scores = []
 
+# read input file
 with open('adventofcode2022/day8/day8input.txt', 'r') as file:
     for line in file:
         treeline = (line.strip())
@@ -9,7 +12,7 @@ with open('adventofcode2022/day8/day8input.txt', 'r') as file:
     # transpose forest for easier parsing
     forest2 = list(zip(*forest))
 
-scores = []
+# find viewing distance for each tree
 for i in range(len(forest[0])):
     for j in range(len(forest)):
         tree = forest[i][j]
@@ -38,7 +41,8 @@ for i in range(len(forest[0])):
             if t >= tree:
                 break
         
-        # calculate scenic score
+        # calculate scenic score for each tree
         scores.append(left * right * up * down)
 
+# print answer
 print(max(scores))
