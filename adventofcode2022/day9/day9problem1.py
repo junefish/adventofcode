@@ -54,4 +54,25 @@ for move in movements:
             # decrease by 1 if moving D
             if(H['y'] > Hy):
                 H['y'] -= 1
-print(H_positions)
+# print(H_positions)
+
+# define tail as overlapping with head at start
+T = H
+T_positions = []
+for H in H_positions:
+    Hx,Hy = H
+    
+    T_positions.append((T['x'],T['y']))
+    if(T['x'] not in range(Hx - 1, Hx + 1)):
+        while(T['x'] < Hx - 1):
+            T['x'] += 1
+        while(T['x'] > Hx + 1):
+            T['x'] -= 1
+    if(T['y'] not in range(Hy - 1, Hy + 1)):
+        while(T['y'] < Hy - 1):
+            T['y'] += 1
+        while(T['y'] > Hy + 1):
+            T['y'] -= 1
+    else:
+        continue
+print(set(T_positions))
