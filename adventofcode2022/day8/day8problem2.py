@@ -1,12 +1,13 @@
 forest = []
-# tranpose forest for easier parsing
-forest2 = list(zip(*forest))
 
 with open('adventofcode2022/day8/day8example.txt', 'r') as file:
     for line in file:
         treeline = (line.strip())
         forest.append([*treeline])
     forest = [list(map(int, x)) for x in forest]
+    
+    # transpose forest for easier parsing
+    forest2 = list(zip(*forest))
 
 for i in range(len(forest[0])):
     for j in range(len(forest)):
