@@ -9,6 +9,7 @@ with open('adventofcode2022/day8/day8example.txt', 'r') as file:
     # transpose forest for easier parsing
     forest2 = list(zip(*forest))
 
+scores = []
 for i in range(len(forest[0])):
     for j in range(len(forest)):
         tree = forest[i][j]
@@ -36,3 +37,8 @@ for i in range(len(forest[0])):
             down += 1
             if t >= tree:
                 break
+        
+        # calculate scenic score
+        scores.append(left * right * up * down)
+
+print(max(scores))
