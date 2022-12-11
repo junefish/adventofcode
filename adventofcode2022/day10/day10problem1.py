@@ -6,7 +6,7 @@ signal = []
 cycles = defaultdict(int)
 signal_strength = {}
 
-# define constants
+# define variables
 X = 1
 cycle = 1
 interesting_cycles = [20,60,100,140,180,220]
