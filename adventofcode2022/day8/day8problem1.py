@@ -1,7 +1,5 @@
 # initialise variables
 forest = []
-# transpose forest for easier parsing
-forest2 = list(zip(*forest))
 visible = 0
 
 # read input file
@@ -10,6 +8,9 @@ with open('adventofcode2022/day8/day8input.txt', 'r') as file:
         treeline = (line.strip())
         forest.append([*treeline])
     forest = [list(map(int, x)) for x in forest]
+    
+    # transpose forest for easier parsing
+    forest2 = list(zip(*forest))
 
 # count how many trees are visible
 for i in range(len(forest[0])):
