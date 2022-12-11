@@ -19,7 +19,7 @@ for move in movements:
         Hy = H['y']
         
     # move right
-    elif(dir == 'R'):
+    if(dir == 'R'):
         Hx = H['x'] + dist
         Hy = H['y']
         
@@ -35,12 +35,12 @@ for move in movements:
                 H['x'] += 1
     
     # move up
-    elif(dir == 'U'):
+    if(dir == 'U'):
         Hx = H['x']
         Hy = H['y'] + dist
     
     # move down
-    elif(dir == 'D'):
+    if(dir == 'D'):
         Hx = H['x']
         Hy = H['y'] - dist
     
