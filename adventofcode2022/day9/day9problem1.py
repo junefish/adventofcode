@@ -13,10 +13,9 @@ T = {'x': 0, 'y': 0}
 Tx = T['x']
 Ty = T['y']
 
-
-
 H_positions = []
 T_stops = []
+T_positions = []
 
 for move in movements:
     dir,dist = move
@@ -83,4 +82,31 @@ for move in movements:
     T_stops.append((Tx,Ty))
     
 # print(H_positions)
-print(T_stops)
+# print(T_stops)
+
+for i in range(len(T_stops)-1):
+    Tx = T_stops[i][0]
+    Ty = T_stops[i][1]
+    
+    # increment T stepwise when moving L/R
+    if(abs(T_stops[i+1][1] - T_stops[i][1]) < 1):
+        while(abs(T_stops[i+1][0] - T_stops[i][0]) > 1):
+            T_positions.append((Tx,Ty))
+            # increase by 1 if moving R
+            if(T_stops[i+1][0] > T_stops[i][0]):
+                Tx += 1
+            # decrease by 1 if moving L
+            if(T_stops[i+1][0] < T_stops[i][0]):
+                Tx -= 1
+    # increment T stepwise when moving L/R
+    if(abs(T_stops[i+1][0] - T_stops[i][0]) < 1):
+        while(abs(T_stops[i+1][1] - T_stops[i][1]) > 1):
+            T_positions.append((Tx,Ty))
+            # increase by 1 if moving U
+            if(T_stops[i+1][1] > T_stops[i][1]):
+                Ty += 1
+            # decrease by 1 if moving L
+            if(T_stops[i+1][1] < T_stops[i][1]):
+                Ty -= 1
+    T_positions.append((Tx,Ty))
+print(T_positions)
