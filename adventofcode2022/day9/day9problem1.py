@@ -57,24 +57,6 @@ for move in movements:
             if(H['y'] > Hy):
                 H['y'] -= 1
     H_positions.append((H['x'],H['y']))
-print(H_positions)
+# print(H_positions)
 
-# T_positions = []
-# for H in H_positions:
-#     Hx,Hy = H
-    
-#     T_positions.append((T['x'],T['y']))
-#     print(T['x'],T['y'])
-#     if(T['x'] not in range(Hx - 1, Hx + 1)):
-#         while(T['x'] < Hx - 1):
-#             T['x'] += 1
-#         while(T['x'] > Hx + 1):
-#             T['x'] -= 1
-#     if(T['y'] not in range(Hy - 1, Hy + 1)):
-#         while(T['y'] < Hy - 1):
-#             T['y'] += 1
-#         while(T['y'] > Hy + 1):
-#             T['y'] -= 1
-#     else:
-#         continue
-# print(len(set(T_positions)))
+T_positions = []
