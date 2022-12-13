@@ -8,6 +8,8 @@ with open('adventofcode2022/day9/day9example.txt', 'r') as file:
 
 # define H as bottom left corner of grid
 H = {'x': 0, 'y': 0}
+# define tail as overlapping with head at start
+T = {'x': 0, 'y': 0}
 
 H_positions = []
 for move in movements:
@@ -56,13 +58,12 @@ for move in movements:
                 H['y'] -= 1
 # print(H_positions)
 
-# define tail as overlapping with head at start
-T = H
 T_positions = []
 for H in H_positions:
     Hx,Hy = H
     
     T_positions.append((T['x'],T['y']))
+    print(T['x'],T['y'])
     if(T['x'] not in range(Hx - 1, Hx + 1)):
         while(T['x'] < Hx - 1):
             T['x'] += 1
@@ -75,4 +76,4 @@ for H in H_positions:
             T['y'] -= 1
     else:
         continue
-print(set(T_positions))
+print(len(set(T_positions)))
