@@ -75,5 +75,8 @@ for move in movements:
         if(Tx != Hx):
             Tx = Hx
         Ty += a
+    
     T_positions.append((Tx,Ty))
+    
+# print(H_positions)
 print(T_positions)
