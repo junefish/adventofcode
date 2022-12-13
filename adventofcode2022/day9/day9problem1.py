@@ -16,7 +16,7 @@ Ty = T['y']
 
 
 H_positions = []
-T_positions = []
+T_stops = []
 
 for move in movements:
     dir,dist = move
@@ -76,7 +76,7 @@ for move in movements:
             Tx = Hx
         Ty += a
     
-    T_positions.append((Tx,Ty))
+    T_stops.append((Tx,Ty))
     
 # print(H_positions)
-print(T_positions)
+print(T_stops)
