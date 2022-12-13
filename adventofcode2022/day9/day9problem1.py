@@ -25,11 +25,13 @@ for move in movements:
     if(dir == 'L'):
         Hx = H['x'] - dist
         Hy = H['y']
+        a = -1
         
     # move right
     if(dir == 'R'):
         Hx = H['x'] + dist
         Hy = H['y']
+        a = 1
         
     # increment H stepwise when moving L/R
     if(H['y'] == Hy):
@@ -46,11 +48,13 @@ for move in movements:
     if(dir == 'U'):
         Hx = H['x']
         Hy = H['y'] + dist
+        a = 1
     
     # move down
     if(dir == 'D'):
         Hx = H['x']
         Hy = H['y'] - dist
+        a = -1
     
     # increment H stepwise when moving U/D
     if(H['x'] == Hx):
@@ -65,7 +69,7 @@ for move in movements:
     H_positions.append((H['x'],H['y']))
     
     # check if tail is close to the head
-    a = int(abs(dist)/dist)
+    # a = int(abs(dist)/dist)
     if(abs(Hx-Tx) > 1):
         if(Ty != Hy): 
             Ty = Hy
