@@ -10,8 +10,14 @@ with open('adventofcode2022/day9/day9example.txt', 'r') as file:
 H = {'x': 0, 'y': 0}
 # define tail as overlapping with head at start
 T = {'x': 0, 'y': 0}
+Tx = T['x']
+Ty = T['y']
+
+
 
 H_positions = []
+T_positions = []
+
 for move in movements:
     dir,dist = move
     
@@ -57,6 +63,17 @@ for move in movements:
             if(H['y'] > Hy):
                 H['y'] -= 1
     H_positions.append((H['x'],H['y']))
-# print(H_positions)
-
-T_positions = []
+    
+    # check if tail is close to the head
+    a = int(abs(dist)/dist)
+    if(abs(Hx-Tx) > 1):
+        if(Ty != Hy): 
+            Ty = Hy
+        Tx += a
+        
+    if(abs(Hy-Ty) > 1):
+        if(Tx != Hx):
+            Tx = Hx
+        Ty += a
+    T_positions.append((Tx,Ty))
+print(T_positions)
