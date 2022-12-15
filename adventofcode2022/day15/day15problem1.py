@@ -16,7 +16,7 @@ for sensor in sensors:
     sensors.append(s)
 
 sensors = [item for item in sensors if not item.startswith('S')]
-print(sensors)
+# print(sensors)
 
 for beacon in beacons:
     beacons.remove(beacon)
@@ -24,4 +24,18 @@ for beacon in beacons:
     beacons.append(b)
 
 beacons = [item for item in beacons if not item.startswith('c')]
-print(beacons)
+# print(beacons)
+
+positions = []
+for i,_ in enumerate(sensors):
+    line = {}
+    s = sensors[i].split(', ')
+    line['Sx'] = int(s[0].replace('x=', ''))
+    line['Sy'] = int(s[1].replace('y=', ''))
+    
+    b = beacons[i].split(', ')
+    line['Bx'] = int(b[0].replace('x=', ''))
+    line['By'] = int(b[1].replace('y=', ''))
+    
+    positions.append(line)
+print(positions)
