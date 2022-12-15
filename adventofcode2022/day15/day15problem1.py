@@ -17,3 +17,11 @@ for sensor in sensors:
 
 sensors = [item for item in sensors if not item.startswith('S')]
 print(sensors)
+
+for beacon in beacons:
+    beacons.remove(beacon)
+    b = beacon.replace('closest beacon is at ', '')
+    beacons.append(b)
+
+beacons = [item for item in beacons if not item.startswith('c')]
+print(beacons)
