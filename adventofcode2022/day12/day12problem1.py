@@ -14,6 +14,10 @@ for i,_ in enumerate(heightmap):
 # print(start)
 # print(end)
 
+for row in heightmap:
+    row = list(map(lambda item: item.replace('S','a'), row))
+    row = list(map(lambda item: item.replace('E','z'), row))
+    
 # find adjacent points
 def findNeighbors(map, point):
     x_min,y_min = 0,0
