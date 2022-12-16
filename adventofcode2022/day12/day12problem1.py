@@ -43,3 +43,17 @@ def findNeighbors(map, point):
         neighbors.append((x, y + 1))
         
     return(neighbors)
+
+def search(map,end):
+    mountains = [end]
+    level = {}
+    level[end] = 0
+    
+    while mountains:
+        current = mountains.pop(0)
+        for neighbor in findNeighbors(map, current):
+            if neighbor not in level:
+                level[neighbor] = level[current] + 1
+                mountains.append(neighbor)
+
+    return level
