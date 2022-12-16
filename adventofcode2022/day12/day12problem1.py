@@ -5,14 +5,16 @@ with open('adventofcode2022/day12/day12example.txt', 'r') as file:
         input.append(x)
 print(input)
 
-for i,_ in enumerate(heightmap):
-    for j,_ in enumerate(heightmap[0]):
-        if(heightmap[i][j] == 'S'):
-            start = (i,j)
-        if(heightmap[i][j] == 'E'):
-            end = (i,j)
-# print(start)
-# print(end)
+def findCoords(map):
+    for i,_ in enumerate(map):
+        for j,_ in enumerate(map[0]):
+            if(map[i][j] == 'S'):
+                start = (i,j)
+            if(map[i][j] == 'E'):
+                end = (i,j)
+    return start, end
+start, end = findCoords(input)
+print(start, end)
 
 for row in heightmap:
     row = list(map(lambda item: item.replace('S','a'), row))
