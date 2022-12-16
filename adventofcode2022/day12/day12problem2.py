@@ -73,3 +73,14 @@ def search(map,end):
                 level[neighbor] = level[current] + 1
                 mountains.append(neighbor)
     return level
+
+# find coordinates of starting and destination positions
+start, end = findCoords(input)
+
+# find potential paths & number of steps
+paths = search(heightmap,end)
+# filter out impossible startpoints
+totals = [paths.get(point) for point in starts if paths.get(point)]
+
+# print answer
+print(min(totals))
