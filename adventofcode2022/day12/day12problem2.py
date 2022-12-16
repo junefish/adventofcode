@@ -1,6 +1,7 @@
 # initialise lists
 input = []
 heightmap = []
+starts = []
 
 # read input file
 with open('adventofcode2022/day12/day12example.txt', 'r') as file:
@@ -20,8 +21,11 @@ def findCoords(map):
         for j,_ in enumerate(map[0]):
             if(map[i][j] == 'S'):
                 start = (i,j)
-            if(map[i][j] == 'E'):
+                starts.append(start)
+            elif(map[i][j] == 'E'):
                 end = (i,j)
+            elif(map[i][j] == 'a'):
+                starts.append((i,j))
     return start, end
     
 # function to find adjacent points
