@@ -5,10 +5,11 @@ with open('adventofcode2022/day12/day12example.txt', 'r') as input:
         heightmap.append(x)
 # print(heightmap)
 
-start = (0,0)
 for i,_ in enumerate(heightmap):
     for j,_ in enumerate(heightmap[0]):
+        if(heightmap[i][j] == 'S'):
+            start = (i,j)
         if(heightmap[i][j] == 'E'):
             end = (i,j)
-            break
-print(end)
+print(start)
+# print(end)
