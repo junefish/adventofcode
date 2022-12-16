@@ -1,5 +1,5 @@
 input = []
-with open('adventofcode2022/day12/day12example.txt', 'r') as file:
+with open('adventofcode2022/day12/day12input.txt', 'r') as file:
     for line in file:
         x = [*line.strip()]
         input.append(x)
