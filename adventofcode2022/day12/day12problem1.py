@@ -22,7 +22,7 @@ for line in input:
     row = list(map(lambda item: item.replace('S','a'), line))
     row2 = list(map(lambda item: item.replace('E','z'), row))
     heightmap.append(row2)
-print(heightmap)
+# print(heightmap)
     
 # find adjacent points
 def findNeighbors(map, point):
@@ -67,3 +67,5 @@ def search(map,end):
                 mountains.append(neighbor)
 
     return level
+
+print(search(heightmap,end)[start])
