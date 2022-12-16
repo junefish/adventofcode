@@ -3,7 +3,7 @@ with open('adventofcode2022/day12/day12example.txt', 'r') as file:
     for line in file:
         x = [*line.strip()]
         input.append(x)
-print(input)
+# print(input)
 
 def findCoords(map):
     for i,_ in enumerate(map):
@@ -14,11 +14,15 @@ def findCoords(map):
                 end = (i,j)
     return start, end
 start, end = findCoords(input)
-print(start, end)
+# print(start, end)
 
-for row in heightmap:
-    row = list(map(lambda item: item.replace('S','a'), row))
-    row = list(map(lambda item: item.replace('E','z'), row))
+# replace start with 'a' and end with 'z' for unicode parsing later
+heightmap = []
+for line in input:
+    row = list(map(lambda item: item.replace('S','a'), line))
+    row2 = list(map(lambda item: item.replace('E','z'), row))
+    heightmap.append(row2)
+print(heightmap)
     
 # find adjacent points
 def findNeighbors(map, point):
