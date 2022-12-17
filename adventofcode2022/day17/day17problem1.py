@@ -39,4 +39,11 @@ fifth rock:
     ##
 """
 rocks.append([(0,0),(1,0),(1,0),(1,1)])
-print(rocks)
+# print(rocks)
+
+# chamber is 7 units wide
+cave_width = 7\
+# first rock stops at cave floor
+level = 0
+# rock appears w/left edge 2 units from wall & bottom edge 3 units above level
+start = (2,3)
