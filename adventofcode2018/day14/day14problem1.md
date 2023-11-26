@@ -36,6 +36,7 @@ the beginning; in general, they will move to different recipes.
 
 Drawing the first Elf as parentheses and the second Elf as square brackets,
 they continue this process:
+
 <pre>
 (3)[7]
 (3)[7] 1  0 
@@ -54,14 +55,15 @@ they continue this process:
  3  7 [1] 0  1  0 (1) 2  4  5  1  5  8  9  1  6  7  7  9 
  3  7  1  0 [1] 0  1  2 (4) <b>5  1  5  8  9  1  6  7  7  9</b>  2 
 </pre>
+
 The Elves think their skill will improve after making a few recipes (your
 puzzle input). However, that could take ages; you can speed this up
 considerably by identifying **the scores of the ten recipes** after that. For
 example:
 
 - If the Elves think their skill will improve after making `9` recipes,
-the scores of the ten recipes after the first nine on the scoreboard
-would be `5158916779` (highlighted in the last line of the diagram).
+  the scores of the ten recipes after the first nine on the scoreboard
+  would be `5158916779` (highlighted in the last line of the diagram).
 - After `5` recipes, the scores of the next ten would be `0124515891`.
 - After `18` recipes, the scores of the next ten would be `9251071085`.
 - After `2018` recipes, the scores of the next ten would be `5941429882`.

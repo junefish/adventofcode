@@ -12,6 +12,7 @@ exactly 45 degrees. In other words:
 
 Considering all lines from the above example would now produce the
 following diagram:
+
 ```
 1.1....11.
 .111...2..
@@ -24,6 +25,7 @@ following diagram:
 1.......1.
 222111....
 ```
+
 You still need to determine **the number of points where at least two lines
 overlap**. In the above example, this is still anywhere in the diagram with a
 `2` or larger - now a total of **`12`** points.

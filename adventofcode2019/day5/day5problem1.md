@@ -11,10 +11,10 @@ run on [your existing Intcode computer](https://adventofcode.com/2019/day/2) aft
 **First**, you'll need to add **two new instructions**:
 
 - Opcode `3` takes a single integer as **input** and saves it to the position
-given by its only parameter. For example, the instruction `3,50` would
-take an input value and store it at address `50`.
+  given by its only parameter. For example, the instruction `3,50` would
+  take an input value and store it at address `50`.
 - Opcode `4` **outputs** the value of its only parameter. For example, the
-instruction `4,50` would output the value at address `50`.
+  instruction `4,50` would output the value at address `50`.
 
 Programs that use these instructions will come with documentation that
 explains what should be connected to the input and output. The program
@@ -48,6 +48,7 @@ rightmost two digits of the first value, `02`, indicate opcode `2`,
 multiplication. Then, going right to left, the parameter modes are `0`
 (hundreds digit), `1` (thousands digit), and `0` (ten-thousands digit, not
 present and therefore zero):
+
 ```
 ABCDE
  1002
@@ -58,6 +59,7 @@ DE - two-digit opcode,      02 == opcode 2
  A - mode of 3rd parameter,  0 == position mode,
                                   omitted due to being a leading zero
 ```
+
 This instruction multiplies its first two parameters. The first parameter,
 `4` in position mode, works like it did before—its value is the value
 stored at address `4` (`33`). The second parameter, `3` in immediate mode, simply
@@ -70,11 +72,11 @@ Parameters that an instruction writes to will **never be in immediate mode**.
 **Finally**, some notes:
 
 - It is important to remember that the instruction pointer should
-increase by **the number of values in the instruction** after the
-instruction finishes. Because of the new instructions, this amount is
-no longer always `4`.
+  increase by **the number of values in the instruction** after the
+  instruction finishes. Because of the new instructions, this amount is
+  no longer always `4`.
 - Integers can be negative: `1101,100,-1,4,0` is a valid program (find
-`100 + -1`, store the result in position `4`).
+  `100 + -1`, store the result in position `4`).
 
 The TEST diagnostic program will start by requesting from the user the ID
 of the system to test by running an **input** instruction—provide it `1`, the

@@ -33,7 +33,7 @@ input instruction to receive the `Y` value for the same packet. Once both
 values of the packet are read in this way, the packet is removed from the
 queue.
 
-Note that these input and output instructions never [block](https://en.wikipedia.org/wiki/Blocking_(computing)). Specifically,
+Note that these input and output instructions never [block](<https://en.wikipedia.org/wiki/Blocking_(computing)>). Specifically,
 output instructions do not wait for the sent packet to be received—the
 computer might send multiple packets before receiving any. Similarly, input
 instructions do not wait for a packet to arrive - if no packet is waiting,

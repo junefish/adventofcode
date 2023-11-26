@@ -27,6 +27,7 @@ corresponds to the bottom-right pixel of the last layer.
 
 For example, given an image `3` pixels wide and `2` pixels tall, the image data
 `123456789012` corresponds to the following image layers:
+
 ```
 Layer 1: 123
          456
@@ -34,6 +35,7 @@ Layer 1: 123
 Layer 2: 789
          012
 ```
+
 The image you received is **`25` pixels wide and `6` pixels tall**.
 
 To make sure the image wasn't corrupted during transmission, the Elves

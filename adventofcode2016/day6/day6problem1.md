@@ -10,6 +10,7 @@ corrupted—almost too badly to recover. **Almost.**
 
 All you need to do is figure out which character is most frequent for each
 position. For example, suppose you had recorded the following messages:
+
 ```
 eedadn
 drvtee
@@ -28,6 +29,7 @@ vrdear
 dvrsen
 enarar
 ```
+
 The most common character in the first column is `e`; in the second, `a`; in
 the third, `s`, and so on. Combining these characters returns the error-
 corrected message, `easter`.

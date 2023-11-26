@@ -1,9 +1,9 @@
 --- Part Two ---
 
-Your device's communication system is correctly detecting packets, but 
+Your device's communication system is correctly detecting packets, but
 still isn't working. It looks like it also needs to look for **messages**.
 
-A **start-of-message marker** is just like a start-of-packet marker, except it 
+A **start-of-message marker** is just like a start-of-packet marker, except it
 consists of **`14` distinct characters** rather than `4`.
 
 Here are the first positions of start-of-message markers for all of the above examples:

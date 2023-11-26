@@ -19,6 +19,7 @@ to that coordinate (and aren't **tied in distance** to any other coordinate).
 
 Your goal is to find the size of the **largest area** that isn't infinite. For
 example, consider the following list of coordinates:
+
 ```
 1, 1
 1, 6
@@ -27,8 +28,10 @@ example, consider the following list of coordinates:
 5, 5
 8, 9
 ```
+
 If we name these coordinates `A` through `F`, we can draw them on a grid,
 putting `0,0` at the top left:
+
 ```
 ..........
 .A........
@@ -41,9 +44,11 @@ putting `0,0` at the top left:
 ..........
 ........F.
 ```
+
 This view is partial—the actual grid extends infinitely in all
 directions. Using the Manhattan distance, each location's closest
 coordinate can be determined, shown here in lowercase:
+
 <pre>
 aaaaa.cccc
 a<b>A</b>aaa.cccc
@@ -56,6 +61,7 @@ bbb.eeefff
 bbb.eeffff
 bbb.ffff<b>F</b>f
 </pre>
+
 Locations shown as `.`. are equally far from two or more coordinates, and so
 they don't count as being closest to any.
 

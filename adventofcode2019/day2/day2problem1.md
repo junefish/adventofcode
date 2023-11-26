@@ -1,4 +1,4 @@
-### --- Day 2: 1202 Program Alarm --- ###
+### --- Day 2: 1202 Program Alarm ---
 
 On the way to your [gravity assist](https://en.wikipedia.org/wiki/Gravity_assist) around the Moon, your ship computer beeps
 angrily about a "[1202 program alarm](https://www.hq.nasa.gov/alsj/a11/a11.landing.html#1023832)". On the radio, an Elf is already
@@ -34,17 +34,21 @@ Once you're done processing an opcode, **move to the next one** by stepping
 forward `4` positions.
 
 For example, suppose you have the following program:
+
 ```
 1,9,10,3,2,3,11,0,99,30,40,50
 ```
+
 For the purposes of illustration, here is the same program split into
 multiple lines:
+
 ```
 1,9,10,3,
 2,3,11,0,
 99,
 30,40,50
 ```
+
 The first four integers, `1,9,10,3`, are at positions `0`, `1`, `2`, and `3`.
 Together, they represent the first opcode (`1`, addition), the positions of
 the two inputs (`9` and `10`), and the position of the output (`3`). To handle
@@ -53,28 +57,32 @@ position `9` contains `30`, and position `10` contains `40`. **Add** these numbe
 together to get `70`. Then, store this value at the output position; here,
 the output position (`3`) is **at** position `3`, so it overwrites itself.
 Afterward, the program looks like this:
+
 <pre>
 1,9,10,<b>70</b>,
 2,3,11,0,
 99,
 30,40,50
 </pre>
+
 Step forward `4` positions to reach the next opcode, `2`. This opcode works
 just like the previous, but it multiplies instead of adding. The inputs are
 at positions `3` and `11`; these positions contain `70` and `50` respectively.
 Multiplying these produces `3500`; this is stored at position `0`:
+
 <pre>
 <b>3500</b>,9,10,70,
 2,3,11,0,
 99,
 30,40,50
 </pre>
+
 Stepping forward `4` more positions arrives at opcode `99`, halting the
 program.
 
 Here are the initial and final states of a few more small programs:
 
--  `1,0,0,0,99` becomes <code><b>2</b>,0,0,0,99</code> (`1 + 1 = 2`).
+- `1,0,0,0,99` becomes <code><b>2</b>,0,0,0,99</code> (`1 + 1 = 2`).
 - `2,3,0,3,99` becomes <code>2,3,0,<b>6</b>,99</code> (`3 * 2 = 6`).
 - `2,4,4,5,99,0` becomes <code>2,4,4,5,99,<b>9801</b></code> (`99 * 99 = 9801`).
 - `1,1,1,4,99,5,6,0,99` becomes <code><b>30</b>,1,1,4,<b>2</b>,5,6,0,99</code>.

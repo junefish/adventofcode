@@ -26,21 +26,22 @@ considered, `R` are the pots to the right, and `N` is whether the current pot
 will have a plant in the next generation. For example:
 
 - A note like `..#.. => .` means that a pot that contains a plant but with
-no plants within two pots of it will not have a plant in it during the
-next generation.
+  no plants within two pots of it will not have a plant in it during the
+  next generation.
 - A note like `##.## => .` means that an empty pot with two plants on each
-side of it will remain empty in the next generation.
+  side of it will remain empty in the next generation.
 - A note like `.##.# => #` means that a pot has a plant in a given
-generation if, in the previous generation, there were plants in that
-pot, the one immediately to the left, and the one two pots to the
-right, but not in the ones immediately to the right and two to the
-left.
+  generation if, in the previous generation, there were plants in that
+  pot, the one immediately to the left, and the one two pots to the
+  right, but not in the ones immediately to the right and two to the
+  left.
 
 It's not clear what these plants are for, but you're sure it's important,
 so you'd like to make sure the current configuration of plants is
 sustainable by determining what will happen after **`20` generations**.
 
 For example, given the following input:
+
 ```
 initial state: #..#.#..##......###...###
 
@@ -59,12 +60,14 @@ initial state: #..#.#..##......###...###
 ###.# => #
 ####. => #
 ```
+
 For brevity, in this example, only the combinations which do produce a
 plant are listed. (Your input includes all possible combinations.) Then,
 the next `20` generations will look like this:
+
 ```
-                 1         2         3     
-       0         0         0         0     
+                 1         2         3
+       0         0         0         0
  0: ...#..#.#..##......###...###...........
  1: ...#...#....#.....#..#..#..#...........
  2: ...##..##...##....#..#..#..##..........
@@ -87,6 +90,7 @@ the next `20` generations will look like this:
 19: .#..###.#..#.#.#######.#.#.#..#.#...#..
 20: .#....##....#####...#######....#.#..##.
 ```
+
 The generation is shown along the left, where `0` is the initial state. The
 pot numbers are shown along the top, where `0` labels the center pot,
 negative-numbered pots extend to the left, and positive pots extend toward

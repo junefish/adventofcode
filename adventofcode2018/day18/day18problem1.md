@@ -22,12 +22,12 @@ counted.)
 In particular:
 
 - An **open** acre will become filled with **trees** if **three or more** adjacent
-acres contained trees. Otherwise, nothing happens.
+  acres contained trees. Otherwise, nothing happens.
 - An acre filled with **trees** will become a **lumberyard** if **three or more**
-adjacent acres were lumberyards. Otherwise, nothing happens.
+  adjacent acres were lumberyards. Otherwise, nothing happens.
 - An acre containing a **lumberyard** will remain a **lumberyard** if it was
-adjacent to **at least one other lumberyard and at least one acre
-containing trees**. Otherwise, it becomes **open**.
+  adjacent to **at least one other lumberyard and at least one acre
+  containing trees**. Otherwise, it becomes **open**.
 
 These changes happen across all acres **simultaneously**, each of them using
 the state of all acres at the beginning of the minute and changing to their
@@ -36,6 +36,7 @@ minute don't affect each other.
 
 For example, suppose the lumber collection area is instead only 10 by 10
 acres with this initial configuration:
+
 ```
 Initial state:
 .#.#...|#.
@@ -169,9 +170,10 @@ After 10 minutes:
 ||||#|||||
 ||||||||||
 ```
+
 After 10 minutes, there are `37` wooded acres and `31` lumberyards. Multiplying
 the number of wooded acres by the number of lumberyards gives the total
-**resource value** after ten minutes: <code>37 * 31 = <b>1147</b></code>.
+**resource value** after ten minutes: <code>37 \* 31 = <b>1147</b></code>.
 
 **What will the total resource value of the lumber collection area be after
 10 minutes?**

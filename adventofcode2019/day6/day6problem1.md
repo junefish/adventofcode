@@ -7,6 +7,7 @@ and Santa. You download a map of the local orbits (your puzzle input).
 
 Except for the universal Center of Mass (`COM`), every object in space is in
 orbit around exactly one other object. An [orbit](https://en.wikipedia.org/wiki/Orbit) looks roughly like this:
+
 ```
                   \
                    \
@@ -18,6 +19,7 @@ AAA--> o            o <--BBB
                    /
                   /
 ```
+
 In this diagram, the object `BBB` is in orbit around `AAA`. The path that `BBB`
 takes around `AAA` (drawn with lines) is only partly shown. In the map data,
 this orbital relationship is written `AAA)BBB`, which means "`BBB` is in orbit
@@ -33,6 +35,7 @@ can be any number of objects long: if `A` orbits `B`, `B` orbits `C`, and `C` or
 `D`, then `A` indirectly orbits `D`.
 
 For example, suppose you have the following map:
+
 ```
 COM)B
 B)C
@@ -46,7 +49,9 @@ E)J
 J)K
 K)L
 ```
+
 Visually, the above map of orbits looks like this:
+
 ```
         G - H       J - K - L
        /           /
@@ -54,15 +59,16 @@ COM - B - C - D - E - F
                \
                 I
 ```
+
 In this visual representation, when two objects are connected by a line,
 the one on the right directly orbits the one on the left.
 
 Here, we can count the total number of orbits as follows:
 
 - `D` directly orbits `C` and indirectly orbits `B` and `COM`, a total of `3`
-orbits.
+  orbits.
 - `L` directly orbits `K` and indirectly orbits `J`, `E`, `D`, `C`, `B`, and `COM`, a
-total of `7` orbits.
+  total of `7` orbits.
 - `COM` orbits nothing.
 
 The total number of direct and indirect orbits in this example is **`42`**.

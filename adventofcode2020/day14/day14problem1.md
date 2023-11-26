@@ -6,7 +6,7 @@ docking program on the ferry, so the docking parameters aren't being
 correctly initialized in the docking program's memory.
 
 After a brief inspection, you discover that the sea port's computer system
-uses a strange [bitmask](https://en.wikipedia.org/wiki/Mask_(computing)) system in its initialization program. Although you
+uses a strange [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>) system in its initialization program. Although you
 don't have the correct decoder chip handy, you can emulate it in software!
 
 The initialization program (your puzzle input) can either update the
@@ -22,12 +22,14 @@ overwrites the corresponding bit in the value, while an `X` leaves the bit in
 the value unchanged.
 
 For example, consider the following program:
+
 ```
 mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
 mem[8] = 11
 mem[7] = 101
 mem[8] = 0
 ```
+
 This program starts by specifying a bitmask (`mask = ....`). The mask it
 specifies will overwrite two bits in every written value: the `2`s bit is
 overwritten with `0`, and the `64`s bit is overwritten with `1`.
@@ -35,26 +37,32 @@ overwritten with `0`, and the `64`s bit is overwritten with `1`.
 The program then attempts to write the value `11` to memory address `8`. By
 expanding everything out to individual bits, the mask is applied as
 follows:
+
 <pre>
 value:  000000000000000000000000000000001011  (decimal 11)
 mask:   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
 result: 00000000000000000000000000000<b>1</b>0010<b>0</b>1  (decimal 73)
 </pre>
+
 So, because of the mask, the value `73` is written to memory address `8`
 instead. Then, the program tries to write `101` to address 7:
+
 <pre>
 value:  000000000000000000000000000001100101  (decimal 101)
 mask:   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
 result: 00000000000000000000000000000<b>1</b>1001<b>0</b>1  (decimal 101)
 </pre>
+
 This time, the mask has no effect, as the bits it overwrote were already
 the values the mask tried to set. Finally, the program tries to write `0` to
 address `8`:
+
 <pre>
 value:  000000000000000000000000000000000000  (decimal 0)
 mask:   XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
 result: 00000000000000000000000000000<b>1</b>0000<b>0</b>0  (decimal 64)
 </pre>
+
 `64` is written to address `8` instead, overwriting the value that was there
 previously.
 

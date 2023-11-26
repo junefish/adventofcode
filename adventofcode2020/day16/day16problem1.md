@@ -24,6 +24,7 @@ that `3` and `5` are both valid in this field, but `4` is not).
 Each ticket is represented by a single line of comma-separated values. The
 values are the numbers on the ticket in the order they appear; every ticket
 has the same format. For example, consider this ticket:
+
 ```
 .--------------------------------------------------------.
 | ????: 101    ?????: 102   ??????????: 103     ???: 104 |
@@ -32,6 +33,7 @@ has the same format. For example, consider this ticket:
 | ??: 401  ??: 402           ???? ????: 403    ????????? |
 '--------------------------------------------------------'
 ```
+
 Here, `?` represents text in a language you don't understand. This ticket
 might be represented as `101,102,103,104,301,302,303,401,402,403`; of course,
 the actual train tickets you're looking at are **much** more complicated. In
@@ -45,6 +47,7 @@ tickets that contain values which **aren't valid for any field**. Ignore **your
 ticket** for now.
 
 For example, suppose you have the following notes:
+
 <pre>
 class: 1-3 or 5-7
 row: 6-11 or 33-44
@@ -59,6 +62,7 @@ nearby tickets:
 <b>55</b>,2,20
 38,6,<b>12</b>
 </pre>
+
 It doesn't matter which position corresponds to which field; you can
 identify invalid **nearby tickets** by considering only whether tickets contain
 **values that are not valid for any field**. In this example, the values on the

@@ -52,6 +52,7 @@ is **no more than 3** or if they can form a chain of points, each a manhattan
 distance no more than 3 from the last, between the two of them. (That is,
 if a point is close enough to a constellation, it "joins" that
 constellation.) For example:
+
 ```
  0,0,0,0
  3,0,0,0
@@ -62,6 +63,7 @@ constellation.) For example:
  9,0,0,0
 12,0,0,0
 ```
+
 In the above list, the first six points form a single constellation:
 `0,0,0,0` is exactly distance `3` from the next four, and the point at `0,0,0,6`
 is connected to the others by being `3` away from `0,0,0,3`, which is already
@@ -73,6 +75,7 @@ constellations is **`2`**. (If a point at `6,0,0,0` were present, it would conne
 constellation instead.)
 
 In this example, the number of constellations is `4`:
+
 ```
 -1,2,2,0
 0,0,2,-2
@@ -85,7 +88,9 @@ In this example, the number of constellations is `4`:
 0,2,1,-2
 3,0,0,0
 ```
+
 In this one, it's `3`:
+
 ```
 1,-1,0,1
 2,0,-1,0
@@ -98,7 +103,9 @@ In this one, it's `3`:
 1,-1,0,-1
 3,2,0,2
 ```
+
 Finally, in this one, it's `8`:
+
 ```
 1,-1,-1,-2
 -2,-2,0,1
@@ -111,6 +118,7 @@ Finally, in this one, it's `8`:
 1,2,2,0
 -1,-2,0,-2
 ```
+
 The portly man nervously strokes his white beard. It's time to get that hot
 chocolate.
 

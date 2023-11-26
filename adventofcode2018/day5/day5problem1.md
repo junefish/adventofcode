@@ -20,19 +20,21 @@ For example:
 
 - In `aA`, `a` and `A` react, leaving nothing behind.
 - In `abBA`, `bB` destroys itself, leaving `aA`. As above, this then destroys
-itself, leaving nothing.
+  itself, leaving nothing.
 - In `abAB`, no two adjacent units are of the same type, and so nothing
-happens.
+  happens.
 - In `aabAAB`, even though `aa` and `AA` are of the same type, their
-polarities match, and so nothing happens.
+  polarities match, and so nothing happens.
 
 Now, consider a larger example, `dabAcCaCBAcCcaDA`:
+
 <pre>
 dabA<b>cC</b>aCBAcCcaDA  The first 'cC' is removed.
 dab<b>Aa</b>CBAcCcaDA    This creates 'Aa', which is removed.
 dabCBA<b>cCc</b>aDA      Either 'cC' or 'Cc' are removed (the result is the same).
 dabCBAcaDA        No further actions can be taken.
 </pre>
+
 After all possible reactions, the resulting polymer contains **10 units**.
 
 **How many units remain after fully reacting the polymer you scanned?** (Note:

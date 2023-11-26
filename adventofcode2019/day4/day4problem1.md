@@ -10,7 +10,7 @@ However, they do remember a few key facts about the password:
 - The value is within the range given in your puzzle input.
 - Two adjacent digits are the same (like `22` in <code>1<b>22</b>345</code>).
 - Going from left to right, the digits **never decrease**; they only ever
-increase or stay the same (like `111123` or `135679`).
+  increase or stay the same (like `111123` or `135679`).
 
 Other than the range rule, the following are true:
 

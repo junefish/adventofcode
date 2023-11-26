@@ -16,6 +16,7 @@ rate.
 Each bit in the gamma rate can be determined by finding the **most common bit
 in the corresponding position** of all numbers in the diagnostic report. For
 example, given the following diagnostic report:
+
 ```
 00100
 11110
@@ -30,6 +31,7 @@ example, given the following diagnostic report:
 00010
 01010
 ```
+
 Considering only the first bit of each number, there are five `0` bits and
 seven `1` bits. Since the most common bit is `1`, the first bit of the gamma
 rate is `1`.

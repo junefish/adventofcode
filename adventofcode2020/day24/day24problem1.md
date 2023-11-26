@@ -35,6 +35,7 @@ to white. Tiles might be flipped more than once. For example, a line like
 like `nwwswee` flips the reference tile itself.
 
 Here is a larger example:
+
 ```
 sesenwnenenewseeswwswswwnenewsewsw
 neeenesenwnwwswnenewnwwsewnenwseswesw
@@ -57,6 +58,7 @@ eneswnwswnwsenenwnwnwwseeswneewsenese
 neswnwewnwnwseenwseesewsenwsweewe
 wseweeenwnesenwwwswnew
 ```
+
 In the above example, 10 tiles are flipped once (to black), and 5 more are
 flipped twice (to black, then back to white). After all of these
 instructions have been followed, a total of **`10`** tiles are **black**.

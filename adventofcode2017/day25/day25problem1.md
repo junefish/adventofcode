@@ -33,9 +33,9 @@ you can start to identify its parts:
 
 - A **tape** which contains `0` repeated infinitely to the left and right.
 - A **cursor**, which can move left or right along the tape and read or
-write values at its current position.
+  write values at its current position.
 - A set of **states**, each containing rules about what to do based on the
-current value under the cursor.
+  current value under the cursor.
 
 Each slot on the tape has two possible values: `0` (the starting value for
 all slots) and `1`. Based on whether the cursor is pointing at a `0` or a `1`,
@@ -44,6 +44,7 @@ cursor, whether to **move the cursor** left or right one slot, and **which state
 to use next**.
 
 For example, suppose you found the following blueprint:
+
 ```
 Begin in state A.
 Perform a diagnostic checksum after 6 steps.
@@ -68,9 +69,11 @@ In state B:
     - Move one slot to the right.
     - Continue with state A.
 ```
+
 Running it until the number of steps required to take the listed **diagnostic
 checksum** would result in the following tape configurations (with the **cursor**
 marked in square brackets):
+
 ```
 ... 0  0  0 [0] 0  0 ... (before any steps; about to run state A)
 ... 0  0  0  1 [0] 0 ... (after 1 step;     about to run state B)
@@ -80,6 +83,7 @@ marked in square brackets):
 ... 0  1 [1] 0  1  0 ... (after 5 steps;    about to run state B)
 ... 0  1  1 [0] 1  0 ... (after 6 steps;    about to run state A)
 ```
+
 The CPU can confirm that the Turing machine is working by taking a
 **diagnostic checksum** after a specific number of steps (given in the
 blueprint). Once the specified number of steps have been executed, the

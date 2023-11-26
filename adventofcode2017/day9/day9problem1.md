@@ -32,7 +32,7 @@ Here are some self-contained pieces of garbage:
 - `<<<<>`, because the extra `<` are ignored.
 - `<{!>}>`, because the first `>` is canceled.
 - `<!!>`, because the second `!` is canceled, allowing the `>` to terminate
-the garbage.
+  the garbage.
 - `<!!!>>`, because the second `!` and the first `>` are canceled.
 - `<{o"i!a,<{i<a>`, which ends at the first `>`.
 
@@ -47,7 +47,7 @@ contain:
 - `{<a>,<a>,<a>,<a>}`, `1` group.
 - `{{<a>},{<a>},{<a>},{<a>}}`, `5` groups.
 - `{{<!>},{<!>},{<!>},{<a>}}`, `2` groups (since all but the last `>` are
-canceled).
+  canceled).
 
 Your goal is to find the total score for all groups in your input. Each
 group is assigned a **score** which is one more than the score of the group

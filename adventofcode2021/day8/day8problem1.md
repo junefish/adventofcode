@@ -11,6 +11,7 @@ a lot of trouble without them, so you'd better figure out what's wrong.
 
 Each digit of a seven-segment display is rendered by turning on or off any
 of seven segments named `a` through `g`:
+
 <pre>
   0:      1:      2:      3:      4:
  <b>aaaa</b>    ....    <b>aaaa    aaaa</b>    ....
@@ -30,6 +31,7 @@ of seven segments named `a` through `g`:
 .    <b>f  e    f</b>  .    <b>f  e    f</b>  .    <b>f</b>
  <b>gggg    gggg</b>    ....    <b>gggg    gggg</b>
 </pre>
+
 So, to render a `1`, only segments `c` and `f` would be turned on; the rest would
 be off. To render a `7`, only segments `a`, `c`, and `f` would be turned on.
 
@@ -52,10 +54,12 @@ of **all ten unique signal patterns** you see, and then write down a single
 should be able to work out which pattern corresponds to which digit.
 
 For example, here is what you might see in a single entry in your notes:
+
 ```
 acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab |
 cdfeb fcadb cdfeb cdbaf
 ```
+
 (The entry is wrapped here to two lines so it fits; in your notes, it will
 all be on a single line.)
 
@@ -76,6 +80,7 @@ the digits in the output value (`cdfeb fcadb cdfeb cdbaf`) use five segments
 and are more difficult to deduce.
 
 For now, **focus on the easy digits**. Consider this larger example:
+
 <pre>
 be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb |
 <b>fdgacbe</b> cefdb cefbgd <b>gcbe</b>
@@ -98,6 +103,7 @@ egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg |
 gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc |
 <b>fgae</b> cfgab <b>fg</b> bagce
 </pre>
+
 Because the digits `1`, `4`, `7`, and `8` each use a unique number of segments, you
 should be able to tell which combinations of signals correspond to those
 digits. Counting **only digits in the output values** (the part after `|` on each

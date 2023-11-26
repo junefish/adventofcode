@@ -32,8 +32,8 @@ refers to memory address <code>50 + -7 = <b>43</b></code>.
 The relative base is modified with the **relative base offset** instruction:
 
 - Opcode `9` **adjusts the relative base** by the value of its only parameter.
-The relative base increases (or decreases, if the value is negative)
-by the value of the parameter.
+  The relative base increases (or decreases, if the value is negative)
+  by the value of the parameter.
 
 For example, if the relative base is `2000`, then after the instruction
 `109,19`, the relative base would be `2019`. If the next instruction were
@@ -42,16 +42,16 @@ For example, if the relative base is `2000`, then after the instruction
 Your Intcode computer will also need a few other capabilities:
 
 - The computer's available memory should be much larger than the initial
-program. Memory beyond the initial program starts with the value `0` and
-can be read or written like any other memory. (It is invalid to try to
-access memory at a negative address, though.)
+  program. Memory beyond the initial program starts with the value `0` and
+  can be read or written like any other memory. (It is invalid to try to
+  access memory at a negative address, though.)
 - The computer should have support for large numbers. Some instructions
-near the beginning of the BOOST program will verify this capability.
+  near the beginning of the BOOST program will verify this capability.
 
 Here are some example programs that use these features:
 
 - `109,1,204,-1,1001,100,1,100,1008,100,16,101,1006,101,0,99` takes no
-input and produces a [copy of itself](https://en.wikipedia.org/wiki/Quine_(computing)) as output.
+  input and produces a [copy of itself](<https://en.wikipedia.org/wiki/Quine_(computing)>) as output.
 - `1102,34915192,34915192,7,4,7,99,0` should output a 16-digit number.
 - `104,1125899906842624,99` should output the large number in the middle.
 

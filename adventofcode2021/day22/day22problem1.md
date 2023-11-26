@@ -15,12 +15,14 @@ within ranges for `x`, `y`, and `z`) and whether to turn all of the cubes in tha
 cuboid **on** or **off**.
 
 For example, given these reboot steps:
+
 ```
 on x=10..12,y=10..12,z=10..12
 on x=11..13,y=11..13,z=11..13
 off x=9..11,y=9..11,z=9..11
 on x=10..10,y=10..10,z=10..10
 ```
+
 The first step (`on x=10..12,y=10..12,z=10..12`) turns **on** a 3x3x3 cuboid
 consisting of 27 cubes:
 
@@ -97,6 +99,7 @@ positions of at least `-50` and at most `50`. For now, ignore cubes outside
 this region.
 
 Here is a larger example:
+
 ```
 on x=-20..26,y=-36..17,z=-47..7
 on x=-20..33,y=-21..23,z=-26..28
@@ -121,6 +124,7 @@ on x=-41..9,y=-7..43,z=-33..15
 on x=-54112..-39298,y=-85059..-49293,z=-27449..7877
 on x=967..23432,y=45373..81175,z=27513..53682
 ```
+
 The last two steps are fully outside the initialization procedure area; all
 other steps are fully within it. After executing these steps in the
 initialization procedure region, **`590784`** cubes are **on**.

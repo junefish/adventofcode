@@ -15,6 +15,7 @@ their own deck so that the winner's card is above the other card. If this
 causes a player to have all of the cards, they win, and the game ends.
 
 For example, consider the following starting decks:
+
 ```
 Player 1:
 9
@@ -30,6 +31,7 @@ Player 2:
 7
 10
 ```
+
 This arrangement means that player 1's deck contains 5 cards, with `9` on top
 and `1` on the bottom; player 2's deck also contains 5 cards, with `5` on top
 and `10` on the bottom.
@@ -38,6 +40,7 @@ The first round begins with both players drawing the top card of their
 decks: `9` and `5`. Player 1 has the higher card, so both cards move to the
 bottom of player 1's deck such that `9` is above `5`. In total, it takes 29
 rounds before a player has all of the cards:
+
 ```
 -- Round 1 --
 Player 1's deck: 9, 2, 6, 3, 1
@@ -99,14 +102,16 @@ Player 2 wins the round!
 
 
 == Post-game results ==
-Player 1's deck: 
+Player 1's deck:
 Player 2's deck: 3, 2, 10, 6, 8, 5, 9, 4, 7, 1
 ```
+
 Once the game ends, you can calculate the winning player's **score**. The
 bottom card in their deck is worth the value of the card multiplied by 1,
 the second-from-the-bottom card is worth the value of the card multiplied
 by 2, and so on. With 10 cards, the top card is worth the value on the card
 multiplied by 10. In this example, the winning player's score is:
+
 ```
    3 * 10
 +  2 *  9
@@ -120,6 +125,7 @@ multiplied by 10. In this example, the winning player's score is:
 +  1 *  1
 = 306
 ```
+
 So, once the game ends, the winning player's score is **`306`**.
 
 Play the small crab in a game of Combat using the two decks you just dealt.

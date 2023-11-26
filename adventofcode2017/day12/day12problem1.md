@@ -24,6 +24,7 @@ program ID `0`.
 
 For example, suppose you go door-to-door like a travelling salesman and
 record the following list:
+
 ```
 0 <-> 2
 1 <-> 1
@@ -33,8 +34,10 @@ record the following list:
 5 <-> 6
 6 <-> 4, 5
 ```
+
 In this example, the following programs are in the group that contains
 program ID `0`:
+
 - Program `0` by definition.
 - Program `2`, directly connected to program `0`.
 - Program `3` via program `2`.

@@ -14,18 +14,20 @@ continue going the same direction, and only turn left or right when there's
 no other option. In addition, someone has left **letters** on the line; these
 also don't change its direction, but it can use them to keep track of where
 it's been. For example:
+
 ```
-     |          
-     |  +--+    
-     A  |  C    
- F---|----E|--+ 
-     |  |  |  D 
-     +B-+  +--+ 
+     |
+     |  +--+
+     A  |  C
+ F---|----E|--+
+     |  |  |  D
+     +B-+  +--+
 ```
+
 Given this diagram, the packet needs to take the following path:
 
 - Starting at the only line touching the top of the diagram, it must go
-down, pass through `A`, and continue onward to the first `+`.
+  down, pass through `A`, and continue onward to the first `+`.
 - Travel right, up, and right, passing through `B` in the process.
 - Continue down (collecting `C`), right, and up (collecting `D`).
 - Finally, go all the way left through `E` and stopping at `F`.

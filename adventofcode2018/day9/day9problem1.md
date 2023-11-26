@@ -1,7 +1,7 @@
 ### --- Day 9: Marble Mania ---
 
 You talk to the Elves while you wait for your navigation system to
-initialize. To pass the time, they introduce you to their favorite [marble](https://en.wikipedia.org/wiki/Marble_(toy))
+initialize. To pass the time, they introduce you to their favorite [marble](<https://en.wikipedia.org/wiki/Marble_(toy)>)
 game.
 
 The Elves play this game by taking turns arranging the marbles in a **circle**
@@ -32,6 +32,7 @@ placed in the middle, each player (shown in square brackets) takes a turn.
 The result of each of those turns would produce circles of marbles like
 this, where clockwise is to the right and the resulting current marble is
 in parentheses:
+
 <pre>
 [-] <b>(0)</b>
 [1]  0 <b>(1)</b>
@@ -60,6 +61,7 @@ in parentheses:
 [6]  0 16  8 17  4 18 19  2<b>(24)</b>20 10 21  5 22 11  1 12  6 13  3 14  7 15 
 [7]  0 16  8 17  4 18 19  2 24 20<b>(25)</b>10 21  5 22 11  1 12  6 13  3 14  7 15
 </pre>
+
 The goal is to be the **player with the highest score** after the last marble
 is used up. Assuming the example above ends after the marble numbered `25`,
 the winning score is <code>23+9=<b>32</b></code> (because player 5 kept marble `23` and removed

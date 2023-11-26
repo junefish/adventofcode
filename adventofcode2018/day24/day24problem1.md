@@ -16,10 +16,12 @@ can take before it is destroyed), **attack damage** (the amount of damage each
 unit deals), an **attack type**, an **initiative** (higher initiative units attack
 first and win ties), and sometimes **weaknesses** or **immunities**. Here is an
 example group:
+
 ```
 18 units each with 729 hit points (weak to fire; immune to cold, slashing)
  with an attack that does 8 radiation damage at initiative 10
 ```
+
 Each group also has an **effective power**: the number of units in that group
 multiplied by their attack damage. The above group has an effective power
 of `18 * 8 = 144`. Groups never have zero or negative units; instead, the
@@ -70,6 +72,7 @@ After the fight is over, if both armies still contain units, a new fight
 begins; combat only ends once one army has lost all of its units.
 
 For example, consider the following armies:
+
 ```
 Immune System:
 17 units each with 5390 hit points (weak to radiation, bludgeoning) with
@@ -83,8 +86,10 @@ Infection:
 4485 units each with 2961 hit points (immune to radiation; weak to fire,
  cold) with an attack that does 12 slashing damage at initiative 4
 ```
+
 If these armies were to enter combat, the following fights, including
 details during the target selection and attacking phases, would take place:
+
 ```
 Immune System:
 Group 1 contains 17 units
@@ -218,6 +223,7 @@ Infection:
 Group 1 contains 782 units
 Group 2 contains 4434 units
 ```
+
 In the example above, the winning army ends up with <code>782 + 4434 = <b>5216</b></code>
 units.
 

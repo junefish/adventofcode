@@ -10,6 +10,7 @@ the floor of the nearby caves for you (your puzzle input).
 
 Smoke flows to the lowest point of the area it's in. For example, consider
 the following heightmap:
+
 <pre>
 2<b>1</b>9994321<b>0</b>
 3987894921
@@ -17,6 +18,7 @@ the following heightmap:
 8767896789
 989996<b>5</b>678
 </pre>
+
 Each number corresponds to the height of a particular location, where `9` is
 the highest and `0` is the lowest a location can be.
 

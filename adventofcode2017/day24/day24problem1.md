@@ -25,6 +25,7 @@ For example, if your bridge is made of components `0/3`, `3/7`, and `7/4`, your
 bridge has a strength of `0+3 + 3+7 + 7+4 = 24`.
 
 For example, suppose you had the following components:
+
 ```
 0/2
 2/2
@@ -35,6 +36,7 @@ For example, suppose you had the following components:
 10/1
 9/10
 ```
+
 With them, you could make the following valid bridges:
 
 - `0/1`

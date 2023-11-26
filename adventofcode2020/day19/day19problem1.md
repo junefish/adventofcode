@@ -11,12 +11,14 @@ They sent you a list of **the rules valid messages should obey** and a list of
 
 The **rules for valid messages** (the top part of your puzzle input) are
 numbered and build upon each other. For example:
+
 ```
 0: 1 2
 1: "a"
 2: 1 3 | 3 1
 3: "b"
 ```
+
 Some rules, like `3: "b"`, simply match a single character (in this case, `b`).
 
 The remaining rules list the sub-rules that must be followed; for example,
@@ -36,6 +38,7 @@ matches will be finite. Since rule `1` matches `a` and rule `3` matches `b`, rul
 matches either `ab` or `ba`. Therefore, rule `0` matches `aab` or `aba`.
 
 Here's a more interesting example:
+
 ```
 0: 4 1 5
 1: 2 3 | 3 2
@@ -44,6 +47,7 @@ Here's a more interesting example:
 4: "a"
 5: "b"
 ```
+
 Here, because rule `4` matches `a` and rule `5` matches `b`, rule `2` matches two
 letters that are the same (`aa` or `bb`), and rule `3` matches two letters that
 are different (`ab` or `ba`).
@@ -61,6 +65,7 @@ The **received messages** (the bottom part of your puzzle input) need to be
 checked against the rules so you can determine which are valid and which
 are corrupted. Including the rules and the messages together, this might
 look like:
+
 ```
 0: 4 1 5
 1: 2 3 | 3 2
@@ -75,6 +80,7 @@ abbbab
 aaabbb
 aaaabbb
 ```
+
 Your goal is to determine **the number of messages that completely match rule
 `0`**. In the above example, `ababbb` and `abbbab` match, but `bababa`, `aaabbb`, and
 `aaaabbb` do not, producing the answer **`2`**. The whole message must match all of

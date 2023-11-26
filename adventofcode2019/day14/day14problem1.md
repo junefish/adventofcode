@@ -24,6 +24,7 @@ and 3 `C`. You can run the full reaction as many times as necessary; for
 example, you could produce 10 `D` by consuming 5 `A`, 10 `B`, and 15 `C`.
 
 Suppose your nanofactory produces the following list of reactions:
+
 ```
 10 ORE => 10 A
 1 ORE => 1 B
@@ -32,6 +33,7 @@ Suppose your nanofactory produces the following list of reactions:
 7 A, 1 D => 1 E
 7 A, 1 E => 1 FUEL
 ```
+
 The first two reactions use only `ORE` as inputs; they indicate that you can
 produce as much of chemical `A` as you want (in increments of 10 units, each
 10 costing 10 `ORE`) and as much of chemical `B` as you want (each costing 1
@@ -42,6 +44,7 @@ wasted) required in the reactions to convert the `B` into `C`, `C` into `D`, `D`
 that it is created in increments of 10.)
 
 Or, suppose you have the following list of reactions:
+
 ```
 9 ORE => 2 A
 8 ORE => 3 B
@@ -51,6 +54,7 @@ Or, suppose you have the following list of reactions:
 4 C, 1 A => 1 CA
 2 AB, 3 BC, 4 CA => 1 FUEL
 ```
+
 The above list of reactions requires **165** `ORE` to produce 1 `FUEL`:
 
 - Consume 45 `ORE` to produce 10 `A`.
@@ -64,6 +68,7 @@ The above list of reactions requires **165** `ORE` to produce 1 `FUEL`:
 Here are some larger examples:
 
 - **13312** `ORE` for 1 `FUEL`:
+
 ```
 157 ORE => 5 NZVS
 165 ORE => 6 DCFZ
@@ -75,7 +80,9 @@ Here are some larger examples:
 165 ORE => 2 GPVTF
 3 DCFZ, 7 NZVS, 5 HKGWZ, 10 PSHF => 8 KHKGT
 ```
+
 - **180697** `ORE` for 1 `FUEL`:
+
 ```
 2 VPVL, 7 FWMGM, 2 CXFTF, 11 MNCFX => 1 STKFG
 17 NVRVD, 3 JNWZP => 8 VPVL
@@ -90,7 +97,9 @@ Here are some larger examples:
 1 VJHF, 6 MNCFX => 4 RFSQX
 176 ORE => 6 VJHF
 ```
+
 - **2210736** `ORE` for 1 `FUEL`:
+
 ```
 171 ORE => 8 CNZTR
 7 ZLQW, 3 BMBT, 9 XCVML, 26 XMNCP, 1 WPTQ, 2 MZWV, 1 RJRHP => 4 PLWSL
@@ -110,5 +119,6 @@ Here are some larger examples:
 7 XCVML => 6 RJRHP
 5 BHXH, 4 VRPVC => 5 LTCX
 ```
+
 Given the list of reactions in your puzzle input, **what is the minimum
 amount of `ORE` required to produce exactly 1 `FUEL`?**

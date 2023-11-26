@@ -22,13 +22,13 @@ terminated with a newline (ASCII code `10`). Possible instructions are:
 
 - **Movement** via `north`, `south`, `east`, or `west`.
 - To **take** an item the droid sees in the environment, use the command
-`take <name of item>`. For example, if the droid reports seeing a
-`red ball`, you can pick it up with `take red ball`.
+  `take <name of item>`. For example, if the droid reports seeing a
+  `red ball`, you can pick it up with `take red ball`.
 - To **drop** an item the droid is carrying, use the command
-`drop <name of item>`. For example, if the droid is carrying a
-`green ball`, you can drop it with `drop green ball`.
+  `drop <name of item>`. For example, if the droid is carrying a
+  `green ball`, you can drop it with `drop green ball`.
 - To get a **list of all of the items** the droid is currently carrying, use
-the command `inv` (for "inventory").
+  the command `inv` (for "inventory").
 
 Extra spaces or other characters aren't allowed—instructions must be
 provided precisely.

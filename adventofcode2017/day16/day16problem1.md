@@ -10,10 +10,10 @@ on until `p`, which stands in position `15`.
 The programs' **dance** consists of a sequence of **dance moves**:
 
 - **Spin**, written `sX`, makes `X` programs move from the end to the front, but
-maintain their order otherwise. (For example, `s3` on `abcde` produces
-`cdeab`).
+  maintain their order otherwise. (For example, `s3` on `abcde` produces
+  `cdeab`).
 - **Exchange**, written `xA/B`, makes the programs at positions `A` and `B` swap
-places.
+  places.
 - **Partner**, written `pA/B`, makes the programs named `A` and `B` swap places.
 
 For example, with only five programs standing in a line (`abcde`), they could

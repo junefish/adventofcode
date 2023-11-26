@@ -42,9 +42,9 @@ will be **true**; if there is a hole, the register will be **false**.
 There are only **three instructions** available in springscript:
 
 - `AND X Y` sets `Y` to **true** if both `X` and `Y` are **true**; otherwise, it sets `Y`
-to **false**.
+  to **false**.
 - `OR X Y` sets `Y` to **true** if at least one of `X` or `Y` is **true**; otherwise, it
-sets `Y` to **false**.
+  sets `Y` to **false**.
 - `NOT X Y` sets `Y` to **true** if `X` is **false**; otherwise, it sets `Y` to **false**.
 
 In all three instructions, the second argument (`Y`) needs to be a **writable
@@ -56,6 +56,7 @@ immediately in front of me is not ground, jump".
 
 Or, here is a program that jumps if a three-tile-wide hole (with ground on
 the other side of the hole) is detected:
+
 ```
 NOT A J
 NOT B T
@@ -64,6 +65,7 @@ NOT C T
 AND T J
 AND D J
 ```
+
 The Intcode program expects ASCII inputs and outputs. It will begin by
 displaying a prompt; then, input the desired instructions one per line. End
 each line with a newline (ASCII code `10`). **When you have finished entering
@@ -74,13 +76,16 @@ If the springdroid **falls into space**, an ASCII rendering of the last moments
 of its life will be produced. In these, `@` is the springdroid, `#` is hull,
 and `.` is empty space. For example, suppose you program the springdroid like
 this:
+
 ```
 NOT D J
 WALK
 ```
+
 This one-instruction program sets `J` to **true** if and only if there is no
 ground four tiles away. In other words, it attempts to jump into any hole
 it finds:
+
 ```
 .................
 .................
@@ -117,6 +122,7 @@ it finds:
 .................
 #####@###########
 ```
+
 However, if the springdroid successfully makes it across, it will use an
 output instruction to indicate the **amount of damage to the hull** as a single
 giant integer outside the normal ASCII range.

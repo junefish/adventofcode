@@ -19,7 +19,7 @@ results. So, if the input list were `9, 8, 7, 6, 5` and the pattern for a
 given element were `1, 2, 3`, the result would be `9*1 + 8*2 + 7*3 + 6*1 + 5*2`
 (with each input element on the left and each value in the repeating
 pattern on the right of each multiplication). Then, only the ones digit is
-kept: `38 becomes `8`, `-17` becomes `7`, and so on.
+kept: `38 becomes `8`, `-17`becomes`7`, and so on.
 
 While each element in the output array uses all of the same input array
 elements, the actual repeating pattern to use depends on **which output
@@ -43,6 +43,7 @@ Given the input signal `12345678`, below are four phases of FFT. Within each
 phase, each output digit is calculated on a single line with the result at
 the far right; each multiplication operation shows the input digit on the
 left and the pattern value on the right:
+
 ```
 Input signal: 12345678
 
@@ -90,6 +91,7 @@ After 3 phases: 03415518
 
 After 4 phases: 01029498
 ```
+
 Here are the first eight digits of the final output list after 100 phases
 for some larger inputs:
 

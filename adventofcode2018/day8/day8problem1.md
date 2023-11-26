@@ -11,7 +11,7 @@ license file."
 
 The navigation system's license file consists of a list of numbers (your
 puzzle input). The numbers define a data structure which, when processed,
-produces some kind of [tree](https://en.wikipedia.org/wiki/Tree_(data_structure)) that can be used to calculate the license
+produces some kind of [tree](<https://en.wikipedia.org/wiki/Tree_(data_structure)>) that can be used to calculate the license
 number.
 
 The **tree** is made up of **nodes**; a single, outermost node forms the tree's
@@ -21,19 +21,21 @@ contain nodes, and so on).
 Specifically, a node consists of:
 
 - A **header**, which is always exactly two numbers:
-    - The quantity of child nodes.
-    - The quantity of metadata entries.
+  - The quantity of child nodes.
+  - The quantity of metadata entries.
 - Zero or more **child nodes** (as specified in the header).
 - One or more **metadata entries** (as specified in the header).
 
 Each child node is itself a node that has its own header, child nodes, and
 metadata. For example:
+
 ```
 2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2
 A----------------------------------
     B----------- C-----------
                      D-----
 ```
+
 In this example, each node of the tree is also marked with an underline
 starting with a letter for easier identification. In it, there are four
 nodes:

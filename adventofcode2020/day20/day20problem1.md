@@ -26,6 +26,7 @@ both oriented correctly. Tiles at the edge of the image also have this
 border, but the outermost edges won't line up with any other tiles.
 
 For example, suppose you have the following nine tiles:
+
 ```
 Tile 2311:
 ..##.#..#.
@@ -135,8 +136,10 @@ Tile 3079:
 ..#.......
 ..#.###...
 ```
+
 By rotating, flipping, and rearranging them, you can find a square
 arrangement that causes all adjacent borders to line up:
+
 ```
 #...##.#.. ..###..### #.#.#####.
 ..#.#..#.# ###...#.#. .#..######
@@ -171,12 +174,15 @@ arrangement that causes all adjacent borders to line up:
 #...###... ..##...#.. ...#..####
 ..#.#....# ##.#.#.... ...##.....
 ```
+
 For reference, the IDs of the above tiles are:
+
 <pre>
 <b>1951</b>    2311    <b>3079</b>
 2729    1427    2473
 <b>2971</b>    1489    <b>1171</b>
 </pre>
+
 To check that you've assembled the image correctly, multiply the IDs of the
 four corner tiles together. If you do this with the assembled tiles from
 the example above, you get `1951 * 3079 * 2971 * 1171` = **`20899048083289`**.

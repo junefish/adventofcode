@@ -25,19 +25,19 @@ process:
 - Find the fuel cell's **rack ID**, which is its **`X` coordinate plus 10**.
 - Begin with a power level of the **rack ID times the `Y` coordinate**.
 - Increase the power level by the value of the **grid serial number** (your
-puzzle input).
+  puzzle input).
 - Set the power level to itself multiplied by the **rack ID**.
 - Keep only the **hundreds digit** of the power level (so <code>12<b>3</b>45</code> becomes `3`;
-numbers with no hundreds digit become `0`).
+  numbers with no hundreds digit become `0`).
 - **Subtract `5`** from the power level.
 
 For example, to find the power level of the fuel cell at `3,5` in a grid with
 serial number `8`:
 
 - The rack ID is <code>3 + 10 = <b>13</b></code>.
-- The power level starts at <code>13 * 5 = <b>65</b></code>.
+- The power level starts at <code>13 \* 5 = <b>65</b></code>.
 - Adding the serial number produces <code>65 + 8 = <b>73</b></code>.
-- Multiplying by the rack ID produces <code>73 * 13 = <b>949</b></code>.
+- Multiplying by the rack ID produces <code>73 \* 13 = <b>949</b></code>.
 - The hundreds digit of <code>9<b>4</b>9</code> is **`9`**.
 - Subtracting 5 produces <code>9 - 5 = <b>4</b></code>.
 
@@ -56,6 +56,7 @@ the `X,Y` coordinate of its **top-left** fuel cell. For example:
 For grid serial number `18`, the largest total 3x3 square has a top-left
 corner of **`33,45`** (with a total power of `29`); these fuel cells appear in the
 middle of this 5x5 region:
+
 <pre>
 -2  -4   4   4   4
 -4   <b>4   4   4</b>  -5
@@ -63,8 +64,10 @@ middle of this 5x5 region:
  1   <b>1   2   4</b>  -3
 -1   0   2  -5  -2
 </pre>
+
 For grid serial number `42`, the largest 3x3 square's top-left is **`21,61`** (with
 a total power of `30`); they are in the middle of this region:
+
 <pre>
 -3   4   2   2   2
 -4   <b>4   3   3</b>   4
@@ -72,5 +75,6 @@ a total power of `30`); they are in the middle of this region:
  4   <b>3   3   4</b>  -3
  3   3   3  -5  -1
 </pre>
+
 **What is the `X,Y` coordinate of the top-left fuel cell of the 3x3 square with
 the largest total power?**

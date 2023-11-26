@@ -11,7 +11,7 @@ which boards it picks, it will win for sure.
 In the above example, the second board is the last to win, which happens
 after `13` is eventually called and its middle column is completely marked.
 If you were to keep playing until this point, the second board would have a
-sum of unmarked numbers equal to `148` for a final score of <code>148 * 13 = <b>1924</b></code>.
+sum of unmarked numbers equal to `148` for a final score of <code>148 \* 13 = <b>1924</b></code>.
 
 Figure out which board will win last. **Once it wins, what would its final
 score be?**

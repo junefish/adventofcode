@@ -27,10 +27,12 @@ rolls `1` first, then `2`, then `3`, and so on up to `100`, after which it start
 over at `1` again. Play using this die.
 
 For example, given these starting positions:
+
 ```
 Player 1 starting position: 4
 Player 2 starting position: 8
 ```
+
 This is how the game would go:
 
 - Player 1 rolls `1`+`2`+`3` and moves to space `10` for a total score of `10`.
@@ -50,7 +52,7 @@ This is how the game would go:
 
 Since player 1 has at least `1000` points, player 1 wins and the game ends.
 At this point, the losing player had `745` points and the die had been rolled
-a total of `993` times; <code>745 * 993 = <b>739785</b></code>.
+a total of `993` times; <code>745 \* 993 = <b>739785</b></code>.
 
 Play a practice game using the deterministic 100-sided die. The moment
 either player wins, **what do you get if you multiply the score of the losing

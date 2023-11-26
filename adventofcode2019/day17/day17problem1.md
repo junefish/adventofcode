@@ -32,6 +32,7 @@ instead be visible as `X`.
 In general, the scaffold forms a path, but it sometimes loops back onto
 itself. For example, suppose you can see the following view from the
 cameras:
+
 ```
 ..#..........
 ..#..........
@@ -41,6 +42,7 @@ cameras:
 ..#...#...#..
 ..#####...^..
 ```
+
 Here, the vacuum robot, `^` is facing up and sitting at one end of the
 scaffold near the bottom-right of the image. The scaffold continues up,
 loops across itself several times, and ends at the top-left of the image.
@@ -51,6 +53,7 @@ for each, its alignment parameter is the distance between its left edge and
 the left edge of the view multiplied by the distance between its top edge
 and the top edge of the view. Here, the intersections from the above image
 are marked `O`:
+
 ```
 ..#..........
 ..#..........
@@ -60,15 +63,16 @@ are marked `O`:
 ..#...#...#..
 ..#####...^..
 ```
+
 For these intersections:
 
 - The top-left intersection is `2` units from the left of the image and `2`
-units from the top of the image, so its alignment parameter is
-<code>2 * 2 = <b>>4</b></code>.
+  units from the top of the image, so its alignment parameter is
+  <code>2 \* 2 = <b>>4</b></code>.
 - The bottom-left intersection is `2` units from the left and `4` units from
-the top, so its alignment parameter is <code>2 * 4 = <b>8</b></code>.
+  the top, so its alignment parameter is <code>2 \* 4 = <b>8</b></code>.
 - The bottom-middle intersection is `6` from the left and `4` from the top,
-so its alignment parameter is **`24`**.
+  so its alignment parameter is **`24`**.
 - The bottom-right intersection's alignment parameter is **`40`**.
 
 To calibrate the cameras, you need the **sum of the alignment parameters**. In

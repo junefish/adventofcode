@@ -35,6 +35,7 @@ Examples of corrupted chunks include `(]`, `{()()()>`, `(((()))}`, and
 presence causes the whole line to be considered corrupted.
 
 For example, consider the following navigation subsystem:
+
 ```
 [({(<(())[]>[[{[]{<()<>>
 [(()[<>])]({[<{<<[]>>(
@@ -47,6 +48,7 @@ For example, consider the following navigation subsystem:
 <{([([[(<>()){}]>(<<{{
 <{([{{}}[<[[[<>{}]]]>[]]
 ```
+
 Some of the lines aren't corrupted, just incomplete; you can ignore these
 lines for now. The remaining five lines are corrupted:
 
@@ -68,7 +70,7 @@ and look it up in the following table:
 - `}`: `1197` points.
 - `>`: `25137` points.
 
-In the above example, an illegal `)` was found twice <code>(2*3 = <b>6</b> points)</code>, an
+In the above example, an illegal `)` was found twice <code>(2\*3 = <b>6</b> points)</code>, an
 illegal `]` was found once (**`57`** points), an illegal `}` was found once (**`1197`**
 points), and an illegal `>` was found once (**`25137`** points). So, the total
 syntax error score for this file is <code>6+57+1197+25137 = <b>26397</b></code> points!

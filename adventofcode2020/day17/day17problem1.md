@@ -29,20 +29,22 @@ During a cycle, **all** cubes **simultaneously** change their state according to
 the following rules:
 
 - If a cube is **active** and **exactly `2` or `3`** of its neighbors are also
-active, the cube remains **active**. Otherwise, the cube becomes **inactive**.
+  active, the cube remains **active**. Otherwise, the cube becomes **inactive**.
 - If a cube is **inactive** but **exactly `3`** of its neighbors are active, the
-cube becomes **active**. Otherwise, the cube remains **inactive**.
+  cube becomes **active**. Otherwise, the cube remains **inactive**.
 
 The engineers responsible for this experimental energy source would like
 you to simulate the pocket dimension and determine what the configuration
 of cubes should be at the end of the six-cycle boot process.
 
 For example, consider the following initial state:
+
 ```
 .#.
 ..#
 ###
 ```
+
 Even though the pocket dimension is 3-dimensional, this initial state
 represents a small 2-dimensional slice of it. (In particular, this initial
 state defines a 3x3x1 region of the 3-dimensional space.)
@@ -51,6 +53,7 @@ Simulating a few cycles from this initial state produces the following
 configurations, where the result of each cycle is shown layer-by-layer at
 each given `z` coordinate (and the frame of view follows the active cells in
 each cycle):
+
 ```
 Before any cycles:
 
@@ -163,6 +166,7 @@ z=2
 .......
 .......
 ```
+
 After the full six-cycle boot process completes, **`112`** cubes are left in the
 **active** state.
 

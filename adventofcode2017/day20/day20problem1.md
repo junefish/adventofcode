@@ -31,6 +31,7 @@ entirely on the `X`-axis (for simplicity). Drawing the current states of
 particles `0` and `1` (in that order) with an adjacent a number line and
 diagram of current `X` positions (marked in parentheses), the following would
 take place:
+
 ```
 p=< 3,0,0>, v=< 2,0,0>, a=<-1,0,0>    -4 -3 -2 -1  0  1  2  3  4
 p=< 4,0,0>, v=< 0,0,0>, a=<-2,0,0>                         (0)(1)
@@ -42,8 +43,9 @@ p=< 4,0,0>, v=< 0,0,0>, a=<-1,0,0>    -4 -3 -2 -1  0  1  2  3  4
 p=<-2,0,0>, v=<-4,0,0>, a=<-2,0,0>          (1)               (0)
 
 p=< 3,0,0>, v=<-1,0,0>, a=<-1,0,0>    -4 -3 -2 -1  0  1  2  3  4
-p=<-8,0,0>, v=<-6,0,0>, a=<-2,0,0>                         (0)   
+p=<-8,0,0>, v=<-6,0,0>, a=<-2,0,0>                         (0)
 ```
+
 At this point, particle `1` will never be closer to `<0,0,0>` than particle `0`,
 and so, in the long run, particle `0` will stay closest.
 

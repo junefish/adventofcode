@@ -13,10 +13,10 @@ instructions are different:
 - `set X Y` **sets** register `X` to the value of `Y`.
 - `sub X Y` **decreases** register `X` by the value of `Y`.
 - `mul X Y` sets register `X` to the result of **multiplying** the value
-contained in register `X` by the value of `Y`.
+  contained in register `X` by the value of `Y`.
 - `jnz X Y` **jumps** with an offset of the value of `Y`, but only if the value
-of `X` is **not zero**. (An offset of `2` skips the next instruction, an
-offset of `-1` jumps to the previous instruction, and so on.)
+  of `X` is **not zero**. (An offset of `2` skips the next instruction, an
+  offset of `-1` jumps to the previous instruction, and so on.)
 
 Only the instructions listed above are used. The eight registers here,
 named `a` through `h`, all start at `0`.

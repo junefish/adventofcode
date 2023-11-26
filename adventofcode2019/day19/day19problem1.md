@@ -22,6 +22,7 @@ always report `1` at that location.
 To better understand the tractor beam, it is important to **get a good
 picture** of the beam itself. For example, suppose you scan the 10x10 grid of
 points closest to the emitter:
+
 ```
        X
   0->      9
@@ -35,7 +36,8 @@ Y .....####.
   ......####
   .......###
  9........##
- ```
+```
+
 In this example, the **number of points affected by the tractor beam** in the
 10x10 area closest to the emitter is **`27`**.
 

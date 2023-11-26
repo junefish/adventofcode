@@ -20,6 +20,7 @@ Rather than wait, you decide to fast-forward the process and calculate what
 the points will eventually spell.
 
 For example, suppose you note the following points:
+
 ```
 position=< 9,  1> velocity=< 0,  2>
 position=< 7,  0> velocity=<-1,  0>
@@ -53,6 +54,7 @@ position=< 5,  9> velocity=< 1, -2>
 position=<14,  7> velocity=<-2,  0>
 position=<-3,  6> velocity=< 2, -1>
 ```
+
 Each line represents one point. Positions are given as `<X, Y>` pairs: `X`
 represents how far **left** (negative) or **right** (positive) the point appears,
 while `Y` represents how far **up** (negative) or **down** (positive) the point
@@ -65,6 +67,7 @@ initial position were `<3, 9>`, after `3` seconds, its position would become
 `<6, 3>`.
 
 Over time, the points listed above would move like this:
+
 ```
 Initially:
 ........#.............
@@ -156,6 +159,7 @@ After 4 seconds:
 ......................
 ......................
 ```
+
 After 3 seconds, the message appeared briefly: **`HI`**. Of course, your message
 will be much longer and will take many more seconds to appear.
 

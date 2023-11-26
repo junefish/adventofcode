@@ -5,18 +5,20 @@ there's just too much noise in the data.
 
 Instead, consider sums of a **three-measurement sliding window**. Again
 considering the above example:
+
 ```
-199  A      
-200  A B    
-208  A B C  
+199  A
+200  A B
+208  A B C
 210    B C D
 200  E   C D
 207  E F   D
-240  E F G  
+240  E F G
 269    F G H
 260      G H
 263        H
 ```
+
 Start by comparing the first and second three-measurement windows. The
 measurements in the first window are marked `A` (`199`, `200`, `208`); their sum is
 `199 + 200 + 208 = 607`. The second window is marked `B` (`200`, `208`, `210`); its
@@ -30,6 +32,7 @@ enough measurements left to create a new three-measurement sum.
 
 In the above example, the sum of each three-measurement window is as
 follows:
+
 ```
 A: 607 (N/A - no previous sum)
 B: 618 (increased)
@@ -40,6 +43,7 @@ F: 716 (increased)
 G: 769 (increased)
 H: 792 (increased)
 ```
+
 In this example, there are <code><b>5</b></code> sums that are larger than the previous sum.
 
 Consider sums of a three-measurement sliding window. **How many sums are

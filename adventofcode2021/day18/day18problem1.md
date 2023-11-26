@@ -10,6 +10,7 @@ pair can be either a regular number or another pair.
 
 Pairs are written as `[x,y]`, where `x` and `y` are the elements within the pair.
 Here are some example snailfish numbers, one snailfish number per line:
+
 ```
 [1,2]
 [[1,2],3]
@@ -19,6 +20,7 @@ Here are some example snailfish numbers, one snailfish number per line:
 [[[9,[3,8]],[[0,9],6]],[[[3,7],[4,9]],3]]
 [[[[1,3],[5,3]],[[1,3],[8,7]]],[[[4,9],[6,9]],[[8,2],[7,3]]]]
 ```
+
 This snailfish homework is about **addition**. To add two snailfish numbers
 form a pair from the left and right parameters of the addition operator.
 For example, `[1,2] + [[3,4],5]` becomes `[[1,2],[[3,4],5]]`.
@@ -31,9 +33,9 @@ To **reduce a snailfish number**, you must repeatedly do the first action in
 this list that applies to the snailfish number:
 
 - If any pair is **nested inside four pairs**, the leftmost such pair
-**explodes**.
+  **explodes**.
 - If any regular number is **10 or greater**, the leftmost such regular
-number splits.
+  number splits.
 
 Once no action in the above list applies, the snailfish number is reduced.
 
@@ -51,14 +53,14 @@ Then, the entire exploding pair is replaced with the regular number `0`.
 Here are some examples of a single explode action:
 
 - <code>[[[[<b>[9,8]</b>,1],2],3],4]</code> becomes <code>[[[[<b>0,9</b>],2],3],4]</code> (the `9` has no regular
-number to its left, so it is not added to any regular number).
+  number to its left, so it is not added to any regular number).
 - <code>[7,[6,[5,[4,<b>[3,2]</b>]]]]</code> becomes <code>[7,[6,[5,[<b>7,0</b>]]]]</code> (the `2` has no regular
-number to its right, and so it is not added to any regular number).
+  number to its right, and so it is not added to any regular number).
 - <code>[[6,[5,[4,<b>[3,2]</b>]]],1]</code> becomes <code>[[6,[5,[<b>7,0</b>]]],<b>3</b>]</code>.
 - <code>[[3,[2,[1,<b>[7,3]</b>]]],[6,[5,[4,[3,2]]]]]</code> becomes
-<code>[[3,[2,[<b>8,0</b>]]],[9,[5,[4,[3,2]]]]]</code> (the pair `[3,2]` is unaffected
-because the pair `[7,3]` is further to the left; `[3,2]` would explode on
-the next action).
+  <code>[[3,[2,[<b>8,0</b>]]],[9,[5,[4,[3,2]]]]]</code> (the pair `[3,2]` is unaffected
+  because the pair `[7,3]` is further to the left; `[3,2]` would explode on
+  the next action).
 - <code>[[3,[2,[8,0]]],[9,[5,[4,<b>[3,2]</b>]]]]</code> becomes
   <code>[[3,[2,[8,0]]],[9,[5,[<b>7,0</b>]]]]</code>.
 
@@ -70,6 +72,7 @@ and rounded **up**. For example, `10` becomes `[5,5]`, `11` becomes `[5,6]`, `12
 
 Here is the process of finding the reduced result of
 `[[[[4,3],4],4],[7,[[8,4],9]]] + [1,1]`:
+
 <pre>
 after addition: [[[[<b>[4,3]</b>,4],4],[7,[[8,4],9]]],[1,1]]
 after explode:  [[[[0,7],4],[7,[<b>[8,4]</b>,9]]],[1,1]]
@@ -78,6 +81,7 @@ after split:    [[[[0,7],4],[[7,8],[0,<b>13</b>]]],[1,1]]
 after split:    [[[[0,7],4],[[7,8],[0,<b>[6,7]</b>]]],[1,1]]
 after explode:  [[[[0,7],4],[[7,8],[6,0]]],[8,1]]
 </pre>
+
 Once no reduce actions apply, the snailfish number that remains is the
 actual result of the addition operation: `[[[[0,7],4],[[7,8],[6,0]]],[8,1]]`.
 
@@ -88,13 +92,16 @@ and the third, then add that result and the fourth, and so on until all
 numbers in the list have been used once.
 
 For example, the final sum of this list is `[[[[1,1],[2,2]],[3,3]],[4,4]]`:
+
 ```
 [1,1]
 [2,2]
 [3,3]
 [4,4]
 ```
+
 The final sum of this list is `[[[[3,0],[5,3]],[4,4]],[5,5]]`:
+
 ```
 [1,1]
 [2,2]
@@ -102,7 +109,9 @@ The final sum of this list is `[[[[3,0],[5,3]],[4,4]],[5,5]]`:
 [4,4]
 [5,5]
 ```
+
 The final sum of this list is `[[[[5,0],[7,4]],[5,5]],[6,6]]`:
+
 ```
 [1,1]
 [2,2]
@@ -111,7 +120,9 @@ The final sum of this list is `[[[[5,0],[7,4]],[5,5]],[6,6]]`:
 [5,5]
 [6,6]
 ```
+
 Here's a slightly larger example:
+
 ```
 [[[0,[4,5]],[0,0]],[[[4,5],[2,6]],[9,5]]]
 [7,[[[3,7],[4,3]],[[6,3],[8,8]]]]
@@ -124,8 +135,10 @@ Here's a slightly larger example:
 [[[5,[7,4]],7],1]
 [[[[4,2],2],6],[8,7]]
 ```
+
 The final sum `[[[[8,7],[7,7]],[[8,6],[7,7]]],[[[0,7],[6,6]],[8,7]]]` is
 found after adding up the above snailfish numbers:
+
 ```
   [[[0,[4,5]],[0,0]],[[[4,5],[2,6]],[9,5]]]
 + [7,[[[3,7],[4,3]],[[6,3],[8,8]]]]
@@ -163,6 +176,7 @@ found after adding up the above snailfish numbers:
 + [[[[4,2],2],6],[8,7]]
 = [[[[8,7],[7,7]],[[8,6],[7,7]]],[[[0,7],[6,6]],[8,7]]]
 ```
+
 To check whether it's the right answer, the snailfish teacher only checks
 the **magnitude** of the final sum. The magnitude of a pair is 3 times the
 magnitude of its left element plus 2 times the magnitude of its right
@@ -182,6 +196,7 @@ Here are a few more magnitude examples:
 - `[[[[8,7],[7,7]],[[8,6],[7,7]]],[[[0,7],[6,6]],[8,7]]]` becomes **`3488`**.
 
 So, given this example homework assignment:
+
 ```
 [[[0,[5,8]],[[1,7],[9,6]]],[[4,[1,2]],[[1,4],2]]]
 [[[5,[2,8]],4],[5,[[9,9],0]]]
@@ -194,6 +209,7 @@ So, given this example homework assignment:
 [[2,[[7,7],7]],[[5,8],[[9,3],[0,2]]]]
 [[[[5,2],5],[8,[3,7]]],[[5,[7,5]],[4,4]]]
 ```
+
 The final sum is:
 
 `[[[[6,6],[7,6]],[[7,7],[7,0]]],[[[7,7],[7,7]],[[7,8],[9,9]]]]`

@@ -21,6 +21,7 @@ which they appear.
 
 For example, the steps to evaluate the expression `1 + 2 * 3 + 4 * 5 + 6` are
 as follows:
+
 <pre>
 <b>1 + 2</b> * 3 + 4 * 5 + 6
   <b>3   * 3</b> + 4 * 5 + 6
@@ -29,8 +30,10 @@ as follows:
              <b>65   + 6</b>
                  <b>71</b>
 </pre>
+
 Parentheses can override this order; for example, here is what happens if
 parentheses are added to form `1 + (2 * 3) + (4 * (5 + 6))`:
+
 <pre>
 1 + <b>(2 * 3)</b> + (4 * (5 + 6))
 <b>1 +    6</b>    + (4 * (5 + 6))
@@ -39,6 +42,7 @@ parentheses are added to form `1 + (2 * 3) + (4 * (5 + 6))`:
      <b>7      +     44</b>
             <b>51</b>
 </pre>
+
 Here are a few more examples:
 
 - `2 * 3 + (4 * 5)` becomes **`26`**.

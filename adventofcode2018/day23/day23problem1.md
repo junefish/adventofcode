@@ -27,6 +27,7 @@ then, for that nanobot, the **total number of nanobots that are in range** of
 it, **including itself**.
 
 For example, given the following nanobots:
+
 ```
 pos=<0,0,0>, r=4
 pos=<1,0,0>, r=1
@@ -38,6 +39,7 @@ pos=<1,1,1>, r=1
 pos=<1,1,2>, r=1
 pos=<1,3,1>, r=1
 ```
+
 The strongest nanobot is the first one (position `0,0,0`) because its signal
 radius, `4` is the largest. Using that nanobot's location and signal radius,
 the following nanobots are in or out of range:

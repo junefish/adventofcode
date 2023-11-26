@@ -12,6 +12,7 @@ insertion** rules (your puzzle input). You just need to work out what polymer
 would result after repeating the pair insertion process a few times.
 
 For example:
+
 ```
 NNCB
 
@@ -32,6 +33,7 @@ BC -> B
 CC -> N
 CN -> C
 ```
+
 The first line is the **polymer template** - this is the starting point of the
 process.
 
@@ -43,11 +45,11 @@ So, starting with the polymer template `NNCB`, the first step simultaneously
 considers all three pairs:
 
 - The first pair (`NN`) matches the rule `NN -> C`, so element **`C`** is inserted
-between the first `N` and the second `N`.
+  between the first `N` and the second `N`.
 - The second pair (`NC`) matches the rule `NC -> B`, so element **`B`** is
-inserted between the `N` and the `C`.
+  inserted between the `N` and the `C`.
 - The third pair (`CB`) matches the rule `CB -> H`, so element **`H`** is inserted
-between the `C` and the `B`.
+  between the `C` and the `B`.
 
 Note that these pairs overlap: the second element of one pair is the first
 element of the next pair. Also, because all pairs are considered
@@ -57,6 +59,7 @@ until the next step.
 After the first step of this process, the polymer becomes <code>N<b>C</b>N<b>B</b>C<b>H</b>B</code>.
 
 Here are the results of a few steps using the above rules:
+
 ```
 Template:     NNCB
 After step 1: NCNBCHB
@@ -64,6 +67,7 @@ After step 2: NBCCNBBBCBHCB
 After step 3: NBBBCNCCNBBNBNBBCHBHHBCHB
 After step 4: NBBNBNBBCCNBCNCCNBBNBBNBBBNBBNBBCBHCBHHNHCBBCBHCB
 ```
+
 This polymer grows quickly. After step 5, it has length 97; After step 10,
 it has length 3073. After step 10, `B` occurs 1749 times, `C` occurs 298 times,
 `H` occurs 161 times, and `N` occurs 865 times; taking the quantity of the most

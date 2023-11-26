@@ -19,8 +19,8 @@ following order:
 - The probe's `x` position increases by its `x` velocity.
 - The probe's `y` position increases by its `y` velocity.
 - Due to drag, the probe's `x` velocity changes by `1` toward the value `0`;
-that is, it decreases by `1` if it is greater than `0`, increases by `1` if
-it is less than `0`, or does not change if it is already `0`.
+  that is, it decreases by `1` if it is greater than `0`, increases by `1` if
+  it is less than `0`, or does not change if it is already `0`.
 - Due to gravity, the probe's `y` velocity decreases by `1`.
 
 For the probe to successfully make it into the trench, the probe must be on
@@ -36,6 +36,7 @@ such that after any step, the probe's `x` position is at least `20` and at most
 
 Given this target area, one initial velocity that causes the probe to be
 within the target area after any step is `7,2`:
+
 ```
 .............#....#............
 .......#..............#........
@@ -52,6 +53,7 @@ S........................#.....
 ....................TTTTTTTTTTT
 ....................TTTTTTTTTTT
 ```
+
 In this diagram, `S` is the probe's initial position, `0,0`. The `x` coordinate
 increases to the right, and the `y` coordinate increases upward. In the
 bottom right, positions that are within the target area are shown as `T`.
@@ -61,6 +63,7 @@ reaches and a position in the target area.)
 
 Another initial velocity that causes the probe to be within the target area
 after any step is `6,3`:
+
 ```
 ...............#..#............
 ...........#........#..........
@@ -80,7 +83,9 @@ S....................#.........
 ....................T#TTTTTTTTT
 ....................TTTTTTTTTTT
 ```
+
 Another one is `9,0`:
+
 ```
 S........#.....................
 .................#.............
@@ -94,8 +99,10 @@ S........#.....................
 ....................TTTTTTTTTTT
 ....................TTTTTTTTTTT
 ```
+
 One initial velocity that **doesn't** cause the probe to be within the target
 area after any step is `17,-4`:
+
 ```
 S..............................................................
 ...............................................................
@@ -121,6 +128,7 @@ S..............................................................
 ...............................................................
 ..............................................................#
 ```
+
 The probe appears to pass through the target area, but is never within it
 after any step. Instead, it continues down and to the right - only the
 first few steps are shown.

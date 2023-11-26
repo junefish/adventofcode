@@ -9,6 +9,7 @@ The cavern is large, but has a very low ceiling, restricting your motion to
 two dimensions. The shape of the cavern resembles a square; a quick scan of
 chiton density produces a map of **risk level** throughout the cave (your
 puzzle input). For example:
+
 ```
 1163751742
 1381373672
@@ -21,6 +22,7 @@ puzzle input). For example:
 1293138521
 2311944581
 ```
+
 You start in the top left position, your destination is the bottom right
 position, and you cannot move diagonally. The number at each position is
 its **risk level**; to determine the total risk of an entire path, add up the
@@ -30,6 +32,7 @@ your total).
 
 Your goal is to find a path with the **lowest total risk**. In this example, a
 path with the lowest total risk is highlighted here:
+
 <pre>
 <b>1</b>163751742
 <b>1</b>381373672
@@ -42,6 +45,7 @@ path with the lowest total risk is highlighted here:
 12931385<b>21</b>
 231194458<b>1</b>
 </pre>
+
 The total risk of this path is **`40`** (the starting position is never entered,
 so its risk is not counted).
 

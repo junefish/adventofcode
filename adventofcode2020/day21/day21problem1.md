@@ -25,12 +25,14 @@ they forgot to label it, or maybe it was labeled in a language you don't
 know.
 
 For example, consider the following list of foods:
+
 ```
 mxmxvkd kfcds sqjhc nhms (contains dairy, fish)
 trh fvjkl sbzzf mxmxvkd (contains dairy)
 sqjhc fvjkl (contains soy)
 sqjhc mxmxvkd sbzzf (contains fish)
 ```
+
 The first food in the list has four ingredients (written in a language you
 don't understand): `mxmxvkd`, `kfcds`, `sqjhc`, and `nhms`. While the food might
 contain other allergens, a few allergens the food definitely contains are

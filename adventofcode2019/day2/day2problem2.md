@@ -1,4 +1,5 @@
-### --- Part Two --- ###
+### --- Part Two ---
+
 "Good, the new computer seems to be working correctly! **Keep it nearby**
 during this mission - you'll probably use it again. Real Intcode computers
 support many more features than your new one, but we'll let you know what

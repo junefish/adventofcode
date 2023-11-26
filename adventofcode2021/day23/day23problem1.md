@@ -15,6 +15,7 @@ locations of each amphipod (`A`, `B`, `C`, or `D`, each of which is occupying an
 otherwise open space), walls (`#`), and open space (`.`).
 
 For example:
+
 ```
 #############
 #...........#
@@ -22,9 +23,11 @@ For example:
   #A#D#C#A#
   #########
 ```
+
 The amphipods would like a method to organize every amphipod into side
 rooms so that each side room contains one type of amphipod and the types
 are sorted `A`-`D` going left to right, like this:
+
 ```
 #############
 #...........#
@@ -32,6 +35,7 @@ are sorted `A`-`D` going left to right, like this:
   #A#B#C#D#
   #########
 ```
+
 Amphipods can move up, down, left, or right so long as they are moving into
 an unoccupied open space. Each type of amphipod requires a different amount
 of **energy** to move one step: Amber amphipods require `1` energy per step,
@@ -43,26 +47,27 @@ However, because they are timid and stubborn, the amphipods have some extra
 rules:
 
 - Amphipods will never **stop on the space immediately outside any room**.
-They can move into that space so long as they immediately continue
-moving. (Specifically, this refers to the four open spaces in the
-hallway that are directly above an amphipod starting position.)
+  They can move into that space so long as they immediately continue
+  moving. (Specifically, this refers to the four open spaces in the
+  hallway that are directly above an amphipod starting position.)
 - Amphipods will never **move from the hallway into a room** unless that
-room is their destination room and that room contains no amphipods
-which do not also have that room as their own destination. If an
-amphipod's starting room is not its destination room, it can stay in
-that room until it leaves the room. (For example, an Amber amphipod
-will not move from the hallway into the right three rooms, and will
-only move into the leftmost room if that room is empty or if it only
-contains other Amber amphipods.)
+  room is their destination room and that room contains no amphipods
+  which do not also have that room as their own destination. If an
+  amphipod's starting room is not its destination room, it can stay in
+  that room until it leaves the room. (For example, an Amber amphipod
+  will not move from the hallway into the right three rooms, and will
+  only move into the leftmost room if that room is empty or if it only
+  contains other Amber amphipods.)
 - Once an amphipod stops moving in the hallway, **it will stay in that
-spot until it can move into a room**. (That is, once any amphipod starts
-moving, any other amphipods currently in the hallway are locked in
-place and will not move again until they can move fully into a room.)
+  spot until it can move into a room**. (That is, once any amphipod starts
+  moving, any other amphipods currently in the hallway are locked in
+  place and will not move again until they can move fully into a room.)
 
 In the above example, the amphipods can be organized using a minimum of
 **`12521`** energy. One way to do this is shown below.
 
 Starting configuration:
+
 ```
 #############
 #...........#
@@ -70,8 +75,10 @@ Starting configuration:
   #A#D#C#A#
   #########
 ```
+
 One Bronze amphipod moves into the hallway, taking 4 steps and using `40`
 energy:
+
 ```
 #############
 #...B.......#
@@ -79,8 +86,10 @@ energy:
   #A#D#C#A#
   #########
 ```
+
 The only Copper amphipod not in its side room moves there, taking 4 steps
 and using `400` energy:
+
 ```
 #############
 #...B.......#
@@ -88,9 +97,11 @@ and using `400` energy:
   #A#D#C#A#
   #########
 ```
+
 A Desert amphipod moves out of the way, taking 3 steps and using `3000`
 energy, and then the Bronze amphipod takes its place, taking 3 steps and
 using `30` energy:
+
 ```
 #############
 #.....D.....#
@@ -98,7 +109,9 @@ using `30` energy:
   #A#B#C#A#
   #########
 ```
+
 The leftmost Bronze amphipod moves to its room using `40` energy:
+
 ```
 #############
 #.....D.....#
@@ -106,8 +119,10 @@ The leftmost Bronze amphipod moves to its room using `40` energy:
   #A#B#C#A#
   #########
 ```
+
 Both amphipods in the rightmost room move into the hallway, using `2003`
 energy in total:
+
 ```
 #############
 #.....D.D.A.#
@@ -115,7 +130,9 @@ energy in total:
   #A#B#C#.#
   #########
 ```
+
 Both Desert amphipods move into the rightmost room using `7000` energy:
+
 ```
 #############
 #.........A.#
@@ -123,7 +140,9 @@ Both Desert amphipods move into the rightmost room using `7000` energy:
   #A#B#C#D#
   #########
 ```
+
 Finally, the last Amber amphipod moves into its room, using `8` energy:
+
 ```
 #############
 #...........#
@@ -131,4 +150,5 @@ Finally, the last Amber amphipod moves into its room, using `8` energy:
   #A#B#C#D#
   #########
 ```
+
 **What is the least energy required to organize the amphipods?**

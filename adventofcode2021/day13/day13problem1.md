@@ -12,9 +12,10 @@ camera system, please enter the code found on page 1 of the manual.`
 
 Apparently, the Elves have never used this feature. To your surprise, you
 manage to find the manual; as you go to open it, page 1 falls out. It's a
-large sheet of [transparent paper](https://en.wikipedia.org/wiki/Transparency_(projection))! The transparent paper is marked with
+large sheet of [transparent paper](<https://en.wikipedia.org/wiki/Transparency_(projection)>)! The transparent paper is marked with
 random dots and includes instructions on how to fold it up (your puzzle
 input). For example:
+
 ```
 6,10
 0,14
@@ -38,12 +39,14 @@ input). For example:
 fold along y=7
 fold along x=5
 ```
+
 The first section is a list of dots on the transparent paper. `0,0`
 represents the top-left coordinate. The first value, `x`, increases to the
 right. The second value, `y`, increases downward. So, the coordinate `3,0` is
 to the right of `0,0`, and the coordinate `0,7` is below `0,0`. The coordinates
 in this example form the following pattern, where `#` is a dot on the paper
 and `.` is an empty, unmarked position:
+
 ```
 ...#..#..#.
 ....#......
@@ -61,11 +64,13 @@ and `.` is an empty, unmarked position:
 #..........
 #.#........
 ```
+
 Then, there is a list of **fold instructions**. Each instruction indicates a
 line on the transparent paper and wants you to fold the paper **up** (for
 horizontal `y=...` lines) or **left** (for vertical `x=...` lines). In this
 example, the first fold instruction is `fold along y=7`, which designates the
 line formed by all of the positions where `y` is `7` (marked here with `-`):
+
 ```
 ...#..#..#.
 ....#......
@@ -83,10 +88,12 @@ line formed by all of the positions where `y` is `7` (marked here with `-`):
 #..........
 #.#........
 ```
-Because this is a horizontal line, fold the bottom half **up***. Some of the
+
+Because this is a horizontal line, fold the bottom half **up\***. Some of the
 dots might end up overlapping after the fold is complete, but dots will
 never appear exactly on a fold line. The result of doing this fold looks
 like this:
+
 ```
 #.##..#..#.
 #...#......
@@ -96,6 +103,7 @@ like this:
 ...........
 ...........
 ```
+
 Now, only `17` dots are visible.
 
 Notice, for example, the two dots in the bottom left corner before the
@@ -108,6 +116,7 @@ Also notice that some dots can end up **overlapping**; in this case, the dots
 merge together and become a single dot.
 
 The second fold instruction is `fold along x=5`, which indicates this line:
+
 ```
 #.##.|#..#.
 #...#|.....
@@ -117,7 +126,9 @@ The second fold instruction is `fold along x=5`, which indicates this line:
 .....|.....
 .....|.....
 ```
+
 Because this is a vertical line, fold **left**:
+
 ```
 #####
 #...#
@@ -127,6 +138,7 @@ Because this is a vertical line, fold **left**:
 .....
 .....
 ```
+
 The instructions made a square!
 
 The transparent paper is pretty big, so for now, focus on just completing

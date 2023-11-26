@@ -25,11 +25,11 @@ over a **black** panel or `1` if the robot is over a **white** panel. Then, the
 program will output two values:
 
 - First, it will output a value indicating the **color to paint the panel**
-the robot is over: `0` means to paint the panel **black**, and `1` means to
-paint the panel **white**.
+  the robot is over: `0` means to paint the panel **black**, and `1` means to
+  paint the panel **white**.
 - Second, it will output a value indicating the **direction the robot
-should turn**: `0` means it should turn **left 90 degrees**, and `1` means it
-should turn **right 90 degrees**.
+  should turn**: `0` means it should turn **left 90 degrees**, and `1` means it
+  should turn **right 90 degrees**.
 
 After the robot turns, it should always move **forward exactly one panel**. The
 robot starts facing **up**.
@@ -42,6 +42,7 @@ For example, suppose the robot is about to start running. Drawing black
 panels as `.`, white panels as `#`, and the robot pointing the direction it is
 facing (`< ^ > v`), the initial state and region near the robot looks like
 this:
+
 ```
 .....
 .....
@@ -49,11 +50,13 @@ this:
 .....
 .....
 ```
+
 The panel under the robot (not visible here because a `^` is shown instead)
 is also black, and so any input instructions at this point should be
 provided `0`. Suppose the robot eventually outputs `1` (paint white) and then `0`
 (turn left). After taking these actions and moving forward one panel, the
 region now looks like this:
+
 ```
 .....
 .....
@@ -61,8 +64,10 @@ region now looks like this:
 .....
 .....
 ```
+
 Input instructions should still be provided `0`. Next, the robot might output
 `0` (paint black) and then `0` (turn left):
+
 ```
 .....
 .....
@@ -70,7 +75,9 @@ Input instructions should still be provided `0`. Next, the robot might output
 .v...
 .....
 ```
+
 After more outputs (`1,0, 1,0`):
+
 ```
 .....
 .....
@@ -78,9 +85,11 @@ After more outputs (`1,0, 1,0`):
 .##..
 .....
 ```
+
 The robot is now back where it started, but because it is now on a white
 panel, input instructions should be provided 1. After several more outputs
 (`0,1, 1,0, 1,0`), the area looks like this:
+
 ```
 .....
 ..<#.
@@ -88,6 +97,7 @@ panel, input instructions should be provided 1. After several more outputs
 .##..
 .....
 ```
+
 Before you deploy the robot, you should probably have an estimate of the
 area it will cover: specifically, you need to know the **number of panels it
 paints at least once**, regardless of color. In the example above, the robot
