@@ -5,6 +5,7 @@ with open('adventofcode2015/day2/day2example.txt', 'r') as input:
     for line in input:
         dimensions.append((line.strip().split('x')))
 
+paper = 0
 for present in dimensions:
     length = int(present[0])
     width = int(present[1])
@@ -13,4 +14,7 @@ for present in dimensions:
     area = 2*length*width + 2*width*height + 2*height*length
 
     slack = min(length*width, width*height, height*length)
-    print(slack)
+
+    paper += area + slack
+
+print(paper)
