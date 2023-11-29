@@ -11,4 +11,6 @@ for present in dimensions:
     height = int(present[2])
 
     area = 2*length*width + 2*width*height + 2*height*length
-    print(area)
+
+    slack = min(length*width, width*height, height*length)
+    print(slack)
