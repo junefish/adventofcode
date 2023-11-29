@@ -9,3 +9,6 @@ for present in dimensions:
     length = int(present[0])
     width = int(present[1])
     height = int(present[2])
+
+    bow = length*width*height
+    print(bow)
