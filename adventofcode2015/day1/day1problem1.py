@@ -4,10 +4,11 @@ instructions = []
 with open('adventofcode2015/day1/day1example.txt', 'r') as input:
     for line in input:
         instructions += line.strip()
-    print(instructions)
 
+floor = 0
 for char in instructions:
     if(char == '('):
-        print(char + " is an open paren")
+        floor += 1
     elif(char == ')'):
-        print(char + " is a closed paren")
+        floor -= 1
+print(floor)
