@@ -10,5 +10,8 @@ for present in dimensions:
     width = int(present[1])
     height = int(present[2])
 
+    sides = [length, width, height]
+    wrap = 2*sorted(sides)[0] + 2*sorted(sides)[1]
+    print(wrap)
+
     bow = length*width*height
-    print(bow)
