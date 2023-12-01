@@ -8,8 +8,8 @@ with open('adventofcode2023/day1/day1example.txt', 'r') as input:
             if(char.isnumeric()):
                 tmp += char
         if(len(tmp) > 1):
-            calibrations.append(tmp)
+            calibrations.append(int(tmp))
         elif(len(tmp) == 1):
-            calibrations.append(tmp+tmp)
-        
+            calibrations.append(int(tmp+tmp))
+
 print(calibrations)
