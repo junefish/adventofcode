@@ -14,4 +14,4 @@ with open('adventofcode2023/day1/day1example.txt', 'r') as input:
         elif(len(tmp) > 2):
             calibrations.append(int(tmp[0] + tmp[-1]))
 
-print(calibrations)
+print(sum(calibrations))
