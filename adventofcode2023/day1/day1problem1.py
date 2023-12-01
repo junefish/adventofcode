@@ -7,9 +7,11 @@ with open('adventofcode2023/day1/day1example.txt', 'r') as input:
         for char in line.strip():
             if(char.isnumeric()):
                 tmp += char
-        if(len(tmp) > 1):
+        if(len(tmp) == 2):
             calibrations.append(int(tmp))
         elif(len(tmp) == 1):
             calibrations.append(int(tmp+tmp))
+        elif(len(tmp) > 2):
+            calibrations.append(int(tmp[0] + tmp[-1]))
 
 print(calibrations)
