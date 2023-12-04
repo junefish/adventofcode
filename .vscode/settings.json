@@ -4,6 +4,5 @@
   "python.testing.pytestEnabled": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "flake8.lintOnChange": true,
-  "python.formatting.provider": "black"
+  "flake8.lintOnChange": true
 }
