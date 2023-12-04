@@ -2,10 +2,10 @@ from typing import DefaultDict
 
 
 fish_timers = []
-with open('adventofcode2021\day6\day6input.txt', 'r') as input:
-  for line in input:
-    item = line.split('\n')
-    fish_timers = item[0].split(',')
+with open("adventofcode2021\day6\day6input.txt", "r") as input:
+    for line in input:
+        item = line.split("\n")
+        fish_timers = item[0].split(",")
 
 fish_timers = list(map(int, fish_timers))
 fish_map = {}
@@ -15,7 +15,7 @@ for fish in fish_timers:
     fish_map[fish] += 1
 
 day = 1
-while(day <= 256):
+while day <= 256:
     updated_map = DefaultDict(int)
 
     for fish, count in fish_map.items():

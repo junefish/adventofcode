@@ -1,24 +1,24 @@
 depths = []
 
-with open('adventofcode2021\day1\day1input.txt', 'r') as input:
-  for line in input:
-    item = line.split('\n')
-    depths.append(int(item[0]))
+with open("adventofcode2021\day1\day1input.txt", "r") as input:
+    for line in input:
+        item = line.split("\n")
+        depths.append(int(item[0]))
 
 window_sums = []
-for i in range(0, len(depths)-2):
-    window = (depths[i], depths[i+1], depths[i+2])
+for i in range(0, len(depths) - 2):
+    window = (depths[i], depths[i + 1], depths[i + 2])
     window_sums.append(sum(window))
 
 deltas = []
 for i in range(0, len(window_sums)):
-    if(i == 0):
+    if i == 0:
         delta = "N/A - no previous measurement"
-    elif(window_sums[i] > window_sums[i-1]):
+    elif window_sums[i] > window_sums[i - 1]:
         delta = "increased"
-    elif(window_sums[i] < window_sums[i-1]):
+    elif window_sums[i] < window_sums[i - 1]:
         delta = "decreased"
-    elif(window_sums[i] == window_sums[i-1]):
+    elif window_sums[i] == window_sums[i - 1]:
         delta = "no change"
     deltas.append(delta)
 
