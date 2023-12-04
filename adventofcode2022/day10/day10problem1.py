@@ -9,26 +9,26 @@ signal_strength = {}
 # define variables
 X = 1
 cycle = 1
-interesting_cycles = [20,60,100,140,180,220]
+interesting_cycles = [20, 60, 100, 140, 180, 220]
 total = 0
 
 # read input file
-with open('adventofcode2022/day10/day10input.txt', 'r') as file:
+with open("adventofcode2022/day10/day10input.txt", "r") as file:
     for line in file:
         signal.append(line.strip())
 
-# run through commands in program        
+# run through commands in program
 for command in signal:
     cycles[cycle] = X
-    
+
     # noop = continue
-    if(command=='noop'):
+    if command == "noop":
         cycle += 1
         cycles[cycle] = X
-    
+
     # addx V = wait 2 cycles then add V to X
-    elif(command.startswith('addx')):
-        V = int(command.split(' ')[-1])
+    elif command.startswith("addx"):
+        V = int(command.split(" ")[-1])
         for i in range(2):
             cycle += 1
             cycles[cycle] = X
@@ -36,7 +36,7 @@ for command in signal:
         cycles[cycle] = X
 
 # calculate signal strength
-for(cycle,X) in cycles.items():
+for cycle, X in cycles.items():
     signal_strength[cycle] = cycle * X
 
 # find sum of signal strengths

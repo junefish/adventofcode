@@ -4,11 +4,14 @@ common = []
 items = []
 
 # read input file
-with open('adventofcode2022/day3/day3input.txt', 'r') as input:
+with open("adventofcode2022/day3/day3input.txt", "r") as input:
     for line in input:
         package = line.strip()
-        first_half, second_half = package[:len(package)//2], package[len(package)//2:]
-        contents.append([first_half,second_half])
+        first_half, second_half = (
+            package[: len(package) // 2],
+            package[len(package) // 2 :],
+        )
+        contents.append([first_half, second_half])
 
 # find items in common between compartments
 for rucksack in contents:
@@ -16,10 +19,10 @@ for rucksack in contents:
 
 # reduce common items for uniqueness
 for c in common:
-     items.append(''.join(set(c)))
+    items.append("".join(set(c)))
 
 # define priorities
-priorities = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+priorities = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 # find sum of priorities from common items
 total = 0

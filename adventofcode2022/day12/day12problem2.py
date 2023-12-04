@@ -4,33 +4,35 @@ heightmap = []
 starts = []
 
 # read input file
-with open('adventofcode2022/day12/day12input.txt', 'r') as file:
+with open("adventofcode2022/day12/day12input.txt", "r") as file:
     for line in file:
         x = [*line.strip()]
         input.append(x)
 
 # replace start with 'a' and end with 'z' for unicode parsing later
 for line in input:
-    row = list(map(lambda item: item.replace('S','a'), line))
-    row2 = list(map(lambda item: item.replace('E','z'), row))
+    row = list(map(lambda item: item.replace("S", "a"), line))
+    row2 = list(map(lambda item: item.replace("E", "z"), row))
     heightmap.append(row2)
+
 
 # function to find coordinates of starting and destination positions
 def findCoords(map):
-    for i,_ in enumerate(map):
-        for j,_ in enumerate(map[0]):
-            if(map[i][j] == 'S'):
-                start = (i,j)
+    for i, _ in enumerate(map):
+        for j, _ in enumerate(map[0]):
+            if map[i][j] == "S":
+                start = (i, j)
                 starts.append(start)
-            elif(map[i][j] == 'E'):
-                end = (i,j)
-            elif(map[i][j] == 'a'):
-                starts.append((i,j))
+            elif map[i][j] == "E":
+                end = (i, j)
+            elif map[i][j] == "a":
+                starts.append((i, j))
     return start, end
-    
+
+
 # function to find adjacent points
 def findNeighbors(map, point):
-    x_min,y_min = 0,0
+    x_min, y_min = 0, 0
     x_max = len(map) - 1
     y_max = len(map[0]) - 1
     x, y = point
@@ -55,15 +57,16 @@ def findNeighbors(map, point):
     # same for bottom
     if (y < y_max) and (node_height < ord(map[x][y + 1])):
         neighbors.append((x, y + 1))
-        
-    return(neighbors)
+
+    return neighbors
+
 
 # function to search matrix from end to start
-def search(map,end):
+def search(map, end):
     mountains = [end]
     level = {}
     level[end] = 0
-    
+
     # search the map
     while mountains:
         current = mountains.pop(0)
@@ -74,11 +77,12 @@ def search(map,end):
                 mountains.append(neighbor)
     return level
 
+
 # find coordinates of starting and destination positions
 start, end = findCoords(input)
 
 # find potential paths & number of steps
-paths = search(heightmap,end)
+paths = search(heightmap, end)
 # filter out impossible startpoints
 totals = [paths.get(point) for point in starts if paths.get(point)]
 
