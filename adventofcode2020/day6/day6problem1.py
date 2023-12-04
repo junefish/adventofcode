@@ -1,12 +1,12 @@
 answers = []
 
 # open file
-with open('adventofcode2020\day6\day6input.txt', 'r') as input:
-    customs_file = input.read().split('\n\n')
+with open("adventofcode2020\day6\day6input.txt", "r") as input:
+    customs_file = input.read().split("\n\n")
 
 for line in customs_file:
-    answers.append(line.replace('\n', ''))
-            
+    answers.append(line.replace("\n", ""))
+
 # remove duplicate answers within a group
 uniques = []
 for answer in answers:
