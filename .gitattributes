@@ -1,3 +1,7 @@
 * text=auto
 
 eol=lf
+
+# git-crypt
+*.txt filter=git-crypt diff=git-crypt
+*.md filter=git-crypt diff=git-crypt
