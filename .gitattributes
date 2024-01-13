@@ -6,4 +6,4 @@ eol=lf
 *.txt filter=git-crypt diff=git-crypt
 *.md filter=git-crypt diff=git-crypt
 .gitattributes !filter !diff
-**/README.md
+**/README.md !filter !diff
