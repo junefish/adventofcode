@@ -11,14 +11,12 @@ def find_distance(list1, list2):
     if len(list1) != len(list2):
         result = "Lists are not the same length"
     else:
+        result = []
         for i in range(len(list1)):
-            print(
-                str(list1[i])
-                + " - "
-                + str(list2[i])
-                + " = "
-                + str(abs(list1[i] - list2[i]))
-            )
+            result.append(abs(list1[i] - list2[i]))
+    return result
 
 
-find_distance(sorted(left), sorted(right))
+distances = find_distance(sorted(left), sorted(right))
+
+print(sum(distances))
