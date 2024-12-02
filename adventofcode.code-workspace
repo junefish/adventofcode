@@ -6,6 +6,7 @@
   ],
   "settings": {
     "editor.formatOnSave": true,
-    "cSpell.words": ["adventofcode"]
+    "cSpell.words": ["adventofcode"],
+    "cSpell.diagnosticLevel": "Hint"
   }
 }
