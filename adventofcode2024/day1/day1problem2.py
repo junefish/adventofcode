@@ -1,7 +1,7 @@
 left = []
 right = []
 
-with open("adventofcode2024/day1/day1example.txt", "r") as input:
+with open("adventofcode2024/day1/day1input.txt", "r") as input:
     for line in input:
         left.append(int(line.strip().split(" ")[0]))
         right.append(int(line.strip().split(" ")[-1]))
@@ -15,4 +15,4 @@ def similarity_score(list1, list2):
     return scores
 
 
-print(similarity_score(left, right))
+print(sum(similarity_score(left, right)))
