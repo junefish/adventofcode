@@ -3,8 +3,6 @@ with open("adventofcode2024/day2/day2example.txt", "r") as input:
     for line in input:
         reports.append([int(item) for item in line.strip().split(" ")])
 
-print(reports)
-
 
 def check_safety(list):
     # check adjacent levels difference
@@ -18,5 +16,9 @@ def check_safety(list):
     return False
 
 
-for level in reports:
-    print(check_safety(level))
+safe_reports = 0
+for report in reports:
+    if check_safety(report):
+        safe_reports += 1
+
+print(safe_reports)
