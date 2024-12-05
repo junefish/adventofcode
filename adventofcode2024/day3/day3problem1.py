@@ -1,7 +1,7 @@
 import re
 
-with open("adventofcode2024/day3/day3example.txt", "r") as input:
-    memory = input.readlines()[0]
+with open("adventofcode2024/day3/day3input.txt", "r") as input:
+    memory = "".join(input.readlines())
 
 
 def scan(str):
