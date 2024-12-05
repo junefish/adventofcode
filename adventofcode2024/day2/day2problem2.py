@@ -24,19 +24,17 @@ for report in reports:
     else:
         unsafe_reports.append(report)
 
-# print(unsafe_reports)
 
 def permutations(report):
     removed_levels = []
     for i in range(len(report)):
         result = []
         for j in range(len(report)):
-            if(i != j):
+            if i != j:
                 result.append(report[j])
         removed_levels.append(result)
-    return(removed_levels)
+    return removed_levels
 
-# print(permutations(unsafe_reports[0]))
 
 for report in unsafe_reports:
     if any(check_safety(x) for x in permutations(report)):
