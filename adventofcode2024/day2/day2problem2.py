@@ -27,11 +27,13 @@ for report in reports:
 # print(unsafe_levels)
 
 def permutations(level):
+    removed_levels = []
     for i in range(len(level)):
         result = []
         for j in range(len(level)):
             if(i != j):
                 result.append(level[j])
-        print(result)
+        removed_levels.append(result)
+    return(removed_levels)
 
-permutations(unsafe_levels[0])
+print(permutations(unsafe_levels[0]))
