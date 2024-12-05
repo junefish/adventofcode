@@ -17,14 +17,14 @@ def check_safety(list):
 
 
 safe_reports = 0
-unsafe_levels = []
+unsafe_reports = []
 for report in reports:
     if check_safety(report):
         safe_reports += 1
     else:
-        unsafe_levels.append(report)
+        unsafe_reports.append(report)
 
-# print(unsafe_levels)
+# print(unsafe_reports)
 
 def permutations(level):
     removed_levels = []
@@ -36,4 +36,4 @@ def permutations(level):
         removed_levels.append(result)
     return(removed_levels)
 
-print(permutations(unsafe_levels[0]))
+print(permutations(unsafe_reports[0]))
