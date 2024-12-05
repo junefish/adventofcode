@@ -12,4 +12,17 @@ def scan(str):
     return result
 
 
-print(scan(memory))
+instructions = scan(memory)
+
+
+def mul(step):
+    s = re.split(r"\(|\,|\)", step)
+    product = int(s[1]) * int(s[2])
+    return product
+
+
+result = 0
+for step in instructions:
+    result += mul(step)
+
+print(result)
