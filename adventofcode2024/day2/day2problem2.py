@@ -36,4 +36,9 @@ def permutations(report):
         removed_levels.append(result)
     return(removed_levels)
 
-print(permutations(unsafe_reports[0]))
+# print(permutations(unsafe_reports[0]))
+
+for report in unsafe_reports:
+    if any(check_safety(x) for x in permutations(report)):
+        safe_reports += 1
+print(safe_reports)
