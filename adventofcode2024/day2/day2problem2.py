@@ -24,4 +24,14 @@ for report in reports:
     else:
         unsafe_levels.append(report)
 
-print(unsafe_levels)
+# print(unsafe_levels)
+
+def permutations(level):
+    for i in range(len(level)):
+        result = []
+        for j in range(len(level)):
+            if(i != j):
+                result.append(level[j])
+        print(result)
+
+permutations(unsafe_levels[0])
