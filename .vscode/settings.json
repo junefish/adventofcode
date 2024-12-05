@@ -6,6 +6,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "flake8.lintOnChange": true,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "mikoz.black-py"
   }
 }
