@@ -28,8 +28,6 @@ def parse_commands(list):
 
 valid_instructions = parse_commands(instructions)
 
-# print(valid_instructions)
-
 
 def scan(str):
     substring = "mul\(\d+,\d+\)"
@@ -41,3 +39,9 @@ def mul(step):
     s = re.split(r"\(|\,|\)", step)
     product = int(s[1]) * int(s[2])
     return product
+
+
+result = 0
+for step in scan("".join(valid_instructions)):
+    result += mul(step)
+print(result)
