@@ -36,4 +36,8 @@ def count(grid, i, j):
     )
 
 
-print(word[0])
+result = 0
+for i in range(height):
+    for j in range(width):
+        result += count(word_search, i, j)
+print(result)
