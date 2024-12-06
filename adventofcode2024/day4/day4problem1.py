@@ -10,24 +10,27 @@ height = len(word_search)
 width = len(word_search[0])
 
 
-def find_substring(grid, i, j):
+def count(grid, i, j):
     if grid[i][j] != "X":
-        str = ""
-    elif j > 2:  # left
-        str = grid[i][j : j - 4 : -1]
-    elif j < width - 3:  # right
-        str = grid[i][j : j + 4]
-    elif i > 2:  # up
-        str = "".join(grid[i - n][j] for n in range(4))
-    elif i < height - 3:  # down
-        str = "".join(grid[i + n][j] for n in range(4))
-    elif i > 2 and j < width - 3:  # quad-I
-        str = "".join(grid[i - n][j + n] for n in range(4))
-    elif i > 2 and j > 2:  # quad-II
-        str = "".join(grid[i - n][j - n] for n in range(4))
-    elif i < height - 3 and j > 2:  # quad-III
-        str = "".join(grid[i + n][j - n] for n in range(4))
-    elif i < height - 3 and j < width - 3:  # quad-IV
-        str = "".join(grid[i + n][j + n] for n in range(4))
-
-    return str
+        return 0
+    return sum(
+        [
+            j > 2 and grid[i][j : j - 4 : -1] == "XMAS",  # left
+            j < width - 3 and grid[i][j : j + 4] == "XMAS",  # right
+            i > 2 and "".join(grid[i - n][j] for n in range(4)) == "XMAS",  # up
+            i < height - 3
+            and "".join(grid[i + n][j] for n in range(4)) == "XMAS",  # down
+            i > 2
+            and j > 2
+            and "".join(grid[i - n][j - n] for n in range(4)) == "XMAS",  # left-up
+            i > 2
+            and j < width - 3
+            and "".join(grid[i - n][j + n] for n in range(4)) == "XMAS",  # right-up
+            i < height - 3
+            and j > 2
+            and "".join(grid[i + n][j - n] for n in range(4)) == "XMAS",  # left-down
+            i < height - 3
+            and j < width - 3
+            and "".join(grid[i + n][j + n] for n in range(4)) == "XMAS",  # right-down
+        ]
+    )
