@@ -15,7 +15,7 @@ def parse_commands(list):
         if list[i] == "yes":
             continue
         elif list[i] == "no":
-            while list[i] != "yes":
+            while list[i] != "yes" and i < len(list) - 1:
                 i += 1
         else:
             valid.append(list[i])
