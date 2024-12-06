@@ -1,7 +1,7 @@
 word_search = []
 with open("adventofcode2024/day4/day4example.txt", "r") as input:
     for line in input:
-        word_search.append(list(line.strip()))
+        word_search.append(line.strip())
 # print(word_search)
 
 word = "XMAS"
@@ -11,26 +11,29 @@ width = len(word_search[0])
 
 
 def count(grid, i, j):
-    if grid[i][j] != "X":
+    if grid[i][j] != word[0]:
         return 0
     return sum(
         [
-            j > 2 and grid[i][j : j - 4 : -1] == "XMAS",  # left
-            j < width - 3 and grid[i][j : j + 4] == "XMAS",  # right
-            i > 2 and "".join(grid[i - n][j] for n in range(4)) == "XMAS",  # up
+            j > 2 and grid[i][j : j - 4 : -1] == word,  # left
+            j < width - 3 and grid[i][j : j + 4] == word,  # right
+            i > 2 and "".join(grid[i - n][j] for n in range(4)) == word,  # up
             i < height - 3
-            and "".join(grid[i + n][j] for n in range(4)) == "XMAS",  # down
-            i > 2
-            and j > 2
-            and "".join(grid[i - n][j - n] for n in range(4)) == "XMAS",  # left-up
+            and "".join(grid[i + n][j] for n in range(4)) == word,  # down
             i > 2
             and j < width - 3
-            and "".join(grid[i - n][j + n] for n in range(4)) == "XMAS",  # right-up
+            and "".join(grid[i - n][j + n] for n in range(4)) == word,  # quad-I
+            i > 2
+            and j > 2
+            and "".join(grid[i - n][j - n] for n in range(4)) == word,  # quad-II
             i < height - 3
             and j > 2
-            and "".join(grid[i + n][j - n] for n in range(4)) == "XMAS",  # left-down
+            and "".join(grid[i + n][j - n] for n in range(4)) == word,  # quad-III
             i < height - 3
             and j < width - 3
-            and "".join(grid[i + n][j + n] for n in range(4)) == "XMAS",  # right-down
+            and "".join(grid[i + n][j + n] for n in range(4)) == word,  # quad-IV
         ]
     )
+
+
+print(word[0])
