@@ -15,7 +15,8 @@ def count(grid, i, j):
         return 0
     return sum(
         [
-            j > 2 and grid[i][j : j - 4 : -1] == word,  # left
+            j > 3 and grid[i][j : j - 4 : -1] == word,  # left
+            j == 3 and grid[i][j::-1] == word,  # left at edge
             j < width - 3 and grid[i][j : j + 4] == word,  # right
             i > 2 and "".join(grid[i - n][j] for n in range(4)) == word,  # up
             i < height - 3
