@@ -14,12 +14,9 @@ def count(grid, i, j):
     if X != word[1]:
         return 0
     elif(i in range(1,height-1) and j in range(1,width-1)):
-        return sum(
-            [
-                "".join([grid[i-1][j-1],X,grid[i+1][j+1]]) in [word,word[::-1]] and
-                "".join([grid[i-1][j+1],X,grid[i+1][j-1]]) in [word,word[::-1]]
-            ]
-        )
+        if("".join([grid[i-1][j-1],X,grid[i+1][j+1]]) in [word,word[::-1]] and
+                "".join([grid[i-1][j+1],X,grid[i+1][j-1]]) in [word,word[::-1]]):
+                return 1
 
 result = 0
 for i in range(height):
