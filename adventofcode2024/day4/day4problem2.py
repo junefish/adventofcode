@@ -17,6 +17,7 @@ def count(grid, i, j):
         if("".join([grid[i-1][j-1],X,grid[i+1][j+1]]) in [word,word[::-1]] and
                 "".join([grid[i-1][j+1],X,grid[i+1][j-1]]) in [word,word[::-1]]):
                 return 1
+    return 0
 
 result = 0
 for i in range(height):
